@@ -1,13 +1,28 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Cta from '../components/Cta/Cta';
+import Services from '../components/FeaturesSection/FeaturesSection';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import HeroSection from '../components/HeroSection/HeroSection';
+import { WhyUs } from '../components/WhyUs/WhyUs';
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "WGM Website" },
+    { name: "description", content: "A better way to build." },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div>
+      <Header />
+      <main>
+        <HeroSection />
+        <Services />
+        <WhyUs />
+        <Cta />
+      </main>
+      <Footer />
+    </div>
+  );
 }
