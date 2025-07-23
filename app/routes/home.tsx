@@ -21,7 +21,7 @@ export default function Home() {
         <HeroSection />
         <Services />
         <TestimonialSection />
-        <WhyUs />
+        {/* <WhyUs /> */}
         <Cta />
       </main>
       <Footer />
