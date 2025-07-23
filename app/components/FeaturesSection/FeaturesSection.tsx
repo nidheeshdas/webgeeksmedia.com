@@ -35,15 +35,15 @@ const services: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="bg-[#f8f8f8] box-border content-stretch flex flex-col gap-[60px] items-center justify-start px-[120px] py-20 relative size-full">
-      <div className="container mx-auto px-8">
-        <div className="box-border content-stretch flex flex-col gap-[18px] items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-center">
-          <h2 className="flex flex-col font-['Satoshi-Medium',_sans-serif] h-10 justify-center relative shrink-0 text-[#000000] text-[40px] w-full">Our Core Services</h2>
-          <p className="flex flex-col font-['Satoshi-Regular',_sans-serif] justify-center relative shrink-0 text-[#333333] text-[20px] w-full">
+    <section id="services" className="bg-[#f8f8f8] box-border content-stretch flex flex-col gap-[40px] sm:gap-[50px] lg:gap-[60px] items-center justify-start px-5 sm:px-[60px] lg:px-[120px] py-16 sm:py-18 lg:py-20 relative size-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="box-border content-stretch flex flex-col gap-[12px] sm:gap-[15px] lg:gap-[18px] items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-center">
+          <h2 className="flex flex-col font-['Satoshi-Medium',_sans-serif] justify-center relative shrink-0 text-[#000000] text-[28px] sm:text-[34px] lg:text-[40px] w-full leading-tight">Our Core Services</h2>
+          <p className="flex flex-col font-['Satoshi-Regular',_sans-serif] justify-center relative shrink-0 text-[#333333] text-[16px] sm:text-[18px] lg:text-[20px] w-full max-w-3xl">
             Comprehensive solutions tailored to boost your online presence and drive sustainable growth.
           </p>
         </div>
-        <div className="box-border content-stretch flex flex-row gap-5 items-center justify-start p-0 relative shrink-0 w-full mt-12">
+        <div className="mt-8 sm:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {services.map((service) => (
             <ServiceCard
               key={service.title}

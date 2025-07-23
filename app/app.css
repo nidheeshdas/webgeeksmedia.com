@@ -1,16 +1,204 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Satoshi", "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --primary-purple: #4600ff;
+  --secondary-purple: #571aff;
+  --dark-background: #232038;
+  --text-primary: #333333;
+  --text-secondary: #000000;
+  --gray-primary: #868686;
+  --gray-secondary: #6a6a6a;
+  --accent-red: #e67474;
+  --accent-yellow: #ffc728;
+  --success-green: #22c55e;
+  --background-primary: #f8f8f8;
+  --background-gradient: linear-gradient(to bottom, #fff8e3, #eff6ff);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   @apply bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200;
   font-family: var(--font-sans);
+  line-height: 1.6;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+/* Improve focus visibility for accessibility */
+*:focus {
+  outline: 2px solid var(--primary-purple);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ensure touch targets are at least 44px for accessibility */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font size utilities */
+.text-60 {
+  font-size: 60px;
+}
+.text-48 {
+  font-size: 48px;
+}
+.text-40 {
+  font-size: 40px;
+}
+.text-26 {
+  font-size: 26px;
+}
+.text-20 {
+  font-size: 20px;
+}
+.text-18 {
+  font-size: 18px;
+}
+.text-17 {
+  font-size: 17px;
+}
+.text-16 {
+  font-size: 16px;
+}
+.text-14 {
+  font-size: 14px;
+}
+.text-12 {
+  font-size: 12px;
+}
+
+/* Container and spacing */
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+/* Additional visual elements and utilities */
+.bg-noise-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(to bottom, #fff8e3, #eff6ff);
+}
+
+/* Custom shadows */
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-purple {
+  box-shadow: 0 4px 20px rgba(70, 0, 255, 0.15);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive text utilities */
+.text-responsive-xl {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.text-responsive-md {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Improved scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-purple);
 }

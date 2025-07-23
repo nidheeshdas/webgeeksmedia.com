@@ -8,10 +8,10 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ variant = 'primary', children, onClick, className }) => {
-  const baseClasses = 'px-4 py-2 rounded-md focus:outline-none';
+  const baseClasses = 'px-[21px] py-[17px] rounded-[30px] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 active:scale-95 min-h-[44px] touch-manipulation';
   const variantClasses = {
-    primary: 'bg-blue-500 text-white hover:bg-blue-600',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+    primary: 'bg-primary-purple text-white hover:bg-secondary-purple focus:ring-purple-500 shadow-lg hover:shadow-xl',
+    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400 shadow-md hover:shadow-lg',
   };
 
   return (

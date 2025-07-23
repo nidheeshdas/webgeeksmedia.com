@@ -3,7 +3,8 @@ import Services from '../components/FeaturesSection/FeaturesSection';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import HeroSection from '../components/HeroSection/HeroSection';
-import { WhyUs } from '../components/WhyUs/WhyUs';
+import TestimonialSection from '../components/TestimonialSection/TestimonialSection';
+import WhyUs from '../components/WhyUs/WhyUs';
 
 export function meta() {
   return [
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <Services />
+        <TestimonialSection />
         <WhyUs />
         <Cta />
       </main>

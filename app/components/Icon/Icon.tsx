@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type IconName = 'arrow-right' | 'star' | 'compass' | 'search' | 'wordpress' | 'document' | 'link' | 'graph' | 'price-tag' | 'chat-bubbles' | 'puzzle-pieces' | 'lightning-bolt' | 'facebook' | 'twitter' | 'linkedin' | 'instagram' | 'pen';
+export type IconName = 'arrow-right' | 'star' | 'compass' | 'search' | 'wordpress' | 'document' | 'link' | 'graph' | 'price-tag' | 'chat-bubbles' | 'puzzle-pieces' | 'lightning-bolt' | 'facebook' | 'twitter' | 'linkedin' | 'instagram' | 'pen' | 'rocket' | 'check' | 'whatsapp';
 
 interface IconProps {
   name: IconName;
@@ -93,6 +93,21 @@ const Icon: React.FC<IconProps> = ({ name, className }) => {
     'instagram': (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.14 0-3.491.012-4.702.068-2.7.123-3.976 1.4-4.1 4.1-.056 1.21-.067 1.551-.067 4.665s.011 3.455.067 4.665c.123 2.7 1.4 3.976 4.1 4.1 1.21.056 1.561.067 4.702.067s3.491-.011 4.702-.067c2.7-.123 3.976-1.4 4.1-4.1.056-1.21.067-1.551.067-4.665s-.011-3.455-.067-4.665c-.123-2.7-1.4-3.976-4.1-4.1-1.21-.056-1.561-.067-4.702-.067zm0 3.604a4.433 4.433 0 1 0 0 8.866 4.433 4.433 0 0 0 0-8.866zm0 6.664a2.231 2.231 0 1 1 0-4.462 2.231 2.231 0 0 1 0 4.462zm4.602-7.332a1.063 1.063 0 1 0 0-2.126 1.063 1.063 0 0 0 0 2.126z" />
+      </svg>
+    ),
+    'rocket': (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={className}>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    'check': (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={className}>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      </svg>
+    ),
+    'whatsapp': (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.77 3.05 1.2 4.79 1.2 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.88 12.14c-.28.52-.92.84-1.28.87-.32.03-.66.04-1.02-.05-.4-.1-2.43-1.01-4.64-2.9-1.73-1.47-2.87-3.28-3.14-3.82-.27-.54-.04-1.1.2-1.44.2-.28.44-.45.64-.45.2 0 .39.01.56.01.17 0 .38.01.55.36.2.37.68 1.65.74 1.77.06.12.1.26.01.41-.09.15-.19.26-.33.41-.15.15-.29.33-.41.43-.12.1-.2.2-.08.39.14.21.64.89 1.28 1.48.85.81 1.63 1.17 1.86 1.28.23.11.36.09.49-.05.13-.14.55-.64.7-1.05.14-.4.28-.33.49-.22.21.11 1.36.64 1.59.76.23.12.38.18.43.28.05.1.03.56-.25 1.08z"/>
       </svg>
     ),
   };
