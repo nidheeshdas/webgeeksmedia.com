@@ -32,15 +32,15 @@ const featurePoints = [
 const TestimonialSection = () => {
   return (
     <section
-      className="box-border flex flex-row items-start justify-between px-[120px] py-20 relative size-full"
+      className="box-border flex flex-col lg:flex-row items-start justify-between gap-12 px-6 lg:px-[120px] py-10 lg:py-20 relative size-full"
       style={{
         backgroundImage: "linear-gradient(148.716deg, rgb(255, 248, 227) 0%, rgb(239, 246, 255) 100%)",
       }}
     >
-      <div className="flex flex-col gap-[30px] w-[442px]">
+      <div className="flex flex-col gap-[30px] w-full lg:w-[442px]">
         <div className="flex flex-col justify-center">
           <h2 className="font-satoshi-black text-[48px] text-black">
-            Why Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">Love Us</span>
+            Why Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500" style={{ WebkitTextFillColor: "transparent" }}>Love Us</span>
           </h2>
           <p className="font-satoshi-medium text-[18px] text-gray-600 leading-[28px]">
             Discover why businesses trust WebGeeksMedia for innovative, reliable, and tailored SEO solutions. From exceptional quality to timely delivery and lasting partnerships, we deliver measurable results that drive success.
@@ -48,7 +48,7 @@ const TestimonialSection = () => {
         </div>
         <TestimonialCard />
       </div>
-      <div className="flex flex-col gap-[47px] w-[657px]">
+      <div className="flex flex-col gap-[47px] w-full lg:w-[657px]">
         {featurePoints.map((feature, index) => (
           <FeaturePoint
             key={index}
