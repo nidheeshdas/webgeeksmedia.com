@@ -1,9 +1,7 @@
 import React from 'react';
 import ServiceCard from '../Card/Card';
-import type { IconName } from '../Icon/Icon';
-
 interface Service {
-  icon: IconName;
+  icon: string;
   title: string;
   description: string;
   upcoming?: boolean;
@@ -11,40 +9,41 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: 'search',
+    icon: 'seo-audit',
     title: 'SEO Audit Services',
-    description: "Get a super in-depth audit of your website for just $49 and receive actionable insights on what's holding back your rankings.",
+    description: 'Get expert eyes on your website. Start with our $49 entry-level audit and discover what’s holding back your rankings.',
   },
   {
-    icon: 'wordpress',
+    icon: 'wordpress-care',
     title: 'WordPress Care Plans',
-    description: 'From essential updates to daily backups for a WooCommerce, we have a plan that lets you run your worry-free site. Starting at just $79/month.',
-  },
-  {
-    icon: 'document',
-    title: 'SEO Content Writing',
-    description: 'Soon, you can receive the right kind of content for your specific needs. Our writers focus on quality, content and affordability. At launch we\'ll be providing...',
+    description: 'From essential updates to elite care for eCommerce, we keep your site secure, fast, and worry-free — starting at just $49/month.',
     upcoming: true,
   },
   {
-    icon: 'link',
+    icon: 'content-writing',
+    title: 'SEO Content Writing',
+    description: 'Scale your content the right way. Choose between high-quality human-written authority content or affordable AI-assisted bulk publishing.',
+    upcoming: true,
+  },
+  {
+    icon: 'link-building',
     title: 'Link Building Services',
-    description: 'Get high-authority, niche-relevant backlinks that move your website up in the SERPs. Tailored campaigns for medium and large businesses. Regional or France.',
+    description: 'Gain high-authority, niche-relevant backlinks to grow your visibility, trust, and traffic. Tailored campaigns for startups and tough niches like CBD or Forex.',
     upcoming: true,
   },
 ];
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="bg-[#f8f8f8] box-border content-stretch flex flex-col gap-[60px] items-center justify-start px-[120px] py-20 relative size-full">
       <div className="container mx-auto px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold">Our Core Services</h2>
-          <p className="text-lg text-gray-500 mt-4">
+        <div className="box-border content-stretch flex flex-col gap-[18px] items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-center">
+          <h2 className="flex flex-col font-['Satoshi-Medium',_sans-serif] h-10 justify-center relative shrink-0 text-[#000000] text-[40px] w-full">Our Core Services</h2>
+          <p className="flex flex-col font-['Satoshi-Regular',_sans-serif] justify-center relative shrink-0 text-[#333333] text-[20px] w-full">
             Comprehensive solutions tailored to boost your online presence and drive sustainable growth.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="box-border content-stretch flex flex-row gap-5 items-center justify-start p-0 relative shrink-0 w-full mt-12">
           {services.map((service) => (
             <ServiceCard
               key={service.title}

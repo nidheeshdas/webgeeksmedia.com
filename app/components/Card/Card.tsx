@@ -1,9 +1,6 @@
 import React from 'react';
-import type { IconName } from '../Icon/Icon';
-import Icon from '../Icon/Icon';
-
 interface ServiceCardProps {
-  icon: IconName;
+  icon: string;
   title: string;
   description: string;
   upcoming?: boolean;
@@ -18,7 +15,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, upc
         </div>
       )}
       <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-100">
-        <Icon name={icon} className="h-6 w-6 text-blue-500" />
+        <img src={`/icons/${icon}.svg`} alt={`${title} icon`} className="h-6 w-6" />
       </div>
       <h3 className="text-xl font-bold mt-4">{title}</h3>
       <p className="text-gray-500 mt-2">{description}</p>
