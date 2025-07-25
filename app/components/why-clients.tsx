@@ -1,6 +1,3 @@
-import { Shield, DollarSign, Users, Puzzle, Clock } from "lucide-react";
-import { Star } from "lucide-react";
-
 const benefits = [
   {
     icon: () => (
@@ -233,38 +230,50 @@ export default function WhyClients() {
   return (
     <section className="bg-white">
       <div className="container mx-auto px-4 py-[80px]">
-        <div className="grid lg:grid-cols-2 gap-24 items-start">
+        <div className="grid lg:grid-cols-2 gap-1 items-start">
           {/* Left Column */}
-          <div className={"max-w-[442px]"}>
+          <div className={"lg:max-w-[442px]"}>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-normal">
               Why Clients <br />
               <span className="text-blue-600">Love Us</span>
             </h2>
-            <p className="text-gray-600 mb-8 text-base leading-[28px]">
+            <p className="text-gray-600 mb-33 text-base leading-[28px]">
               Discover why businesses trust WebGeeksMedia for innovative,
               reliable, and tailored SEO solutions. From exceptional quality to
               timely delivery and lasting partnerships, we deliver measurable
               results that drive success.
             </p>
 
-            {/* Testimonial */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg border border-blue-100 relative overflow-hidden">
-              {/* Quote Icon */}
-              <div className="absolute top-4 right-4 opacity-10">
-                <svg
-                  className="w-12 h-12 text-blue-600"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+            <div className="lg:w-[442px] lg:h-[140px]">
+              <div className="relative mb-6 max-w-[600px]">
+                <p
+                  style={{
+                    borderRadius: "15px",
+                    background:
+                      "linear-gradient(135deg, #FAF5FF 0%, #EFF6FF 100%)",
+                  }}
+                  className="text-gray-700 text-base leading-normal p-6 shadow relative z-10"
                 >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                </svg>
-              </div>
+                  The SEO audit from WebGeeksMedia gave us deep, actionable
+                  insights we had completely overlooked. Highly recommended if
+                  you're serious about improving your site.
+                </p>
 
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
-                "The SEO audit from WebGeeksMedia gave us deep, actionable
-                insights we had completely overlooked. Highly recommended if
-                you're serious about improving your site."
-              </p>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "2.5rem", // aligns with avatar
+                    bottom: "-12px",
+                    width: "49px",
+                    height: "55px",
+                    transform: "rotate(-19deg)",
+                    background:
+                      "linear-gradient(135deg, #FAF5FF 0%, #EFF6FF 100%)",
+                    // filter: "drop-shadow(0 6px 9px rgba(0, 0, 0, 0.19))",
+                    zIndex: 1,
+                  }}
+                />
+              </div>
 
               <div className="flex items-center relative z-10">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-4 flex items-center justify-center text-white font-bold text-lg">
@@ -296,7 +305,7 @@ export default function WhyClients() {
           {/* Right Column */}
           <div className="space-y-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
+              <div key={index} className="flex items-start space-x-4 mb-[47px]">
                 <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-blue-600" />
                 </div>

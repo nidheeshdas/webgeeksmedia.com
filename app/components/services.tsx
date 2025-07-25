@@ -1,5 +1,3 @@
-import { Search, Globe, Edit, Link } from "lucide-react";
-import MagGlass from "./../../public/images/maglass.svg?url";
 const services = [
   {
     icon: () => (
@@ -85,7 +83,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-gray-50">
+    <section className="bg-[#f8f8f8]">
       <div className="container mx-auto px-4 py-[80px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -101,7 +99,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 rounded-[20px] border-r-[4px] border-b-[4px] border-[#D7C8FF] bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative w-[285px] h-auto"
+              className="p-6 rounded-[20px] border-r-[4px] border-b-[4px] border-[#D7C8FF] bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative lg:w-[285px] h-auto"
             >
               {/* Status Badge */}
               {service.status && (

@@ -1,5 +1,5 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
-import Logo from "~/components/logo"
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import Logo from "~/components/logo";
 
 export default function Footer() {
   return (
@@ -12,7 +12,9 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-gray-600 text-sm mb-4 md:mb-0">© 2025 WebGeeksMedia. All rights reserved.</div>
+          <div className="text-gray-600 text-sm mb-4 md:mb-0">
+            © 2025 WebGeeksMedia. All rights reserved.
+          </div>
 
           {/* Social Links */}
           <div className="flex items-center space-x-4">
@@ -32,5 +34,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
