@@ -1,34 +1,48 @@
-import { useState } from "react"
-import { Button } from "~/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
-import Logo from "~/components/logo"
+import { useState } from "react";
+import { Button } from "~/components/ui/button";
+import { Menu, X, ChevronDown } from "lucide-react";
+import Logo from "~/components/logo";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-50 bg-gradient-to-r from-green-100 to-blue-100">
+    <header className="relative z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/"><Logo size="md" /></a>
+            <a href="/">
+              <Logo size="md" />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/services" className="text-gray-700 hover:text-gray-900">
+            <a
+              href="/services"
+              className="text-gray-700 font-satoshi text-[17px] font-medium leading-[20px] hover:text-gray-900"
+            >
               Services
             </a>
-            <a href="/contact-us" className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">
+            <a
+              href="/contact-us"
+              className="flex items-start gap-[10px] px-[21px] py-[12px] rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors"
+            >
               Connect with us
             </a>
           </nav>
 
-
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -43,7 +57,7 @@ export default function Header() {
               <a href="#" className="text-gray-700">
                 About
               </a>
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full w-fit">
+              <Button className=" text-white px-6 py-2 rounded-full w-fit rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors">
                 Connect with us
               </Button>
             </nav>
@@ -51,5 +65,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

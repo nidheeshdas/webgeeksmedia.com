@@ -1,22 +1,21 @@
 interface LogoProps {
-  className?: string
-  size?: "sm" | "md" | "lg"
+  className?: string;
+  size?: "sm" | "md" | "lg";
 }
 
 export default function Logo({ className = "", size = "md" }: LogoProps) {
   const sizeClasses = {
-    sm: "h-6",
-    md: "h-8 md:h-10",
-    lg: "h-12 md:h-16",
-  }
-
+    sm: "w-32",
+    md: "w-[162px]",
+    lg: "w-[162px]",
+  };
   return (
     <img
       src="/images/WebGeeksMediaLogo.png"
       alt="WebGeeks Media"
-      className={`w-auto ${sizeClasses[size]} ${className}`}
+      className={`h-auto ${sizeClasses[size]} ${className}`}
       loading="eager"
       decoding="async"
     />
-  )
+  );
 }
