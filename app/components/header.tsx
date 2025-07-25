@@ -20,17 +20,11 @@ export default function Header() {
             <a href="/services" className="text-gray-700 hover:text-gray-900">
               Services
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">
-              About
+            <a href="/contact-us" className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">
+              Connect with us
             </a>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">
-              Connect with us
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>

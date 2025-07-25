@@ -7,7 +7,7 @@ import FAQ from "~/components/faq-section";
 import CTA from "~/components/cta"
 import Footer from "~/components/footer"
 
-export default function Home() {
+export default function Services() {
     return (
         <main className="min-h-screen">
             <Header />
