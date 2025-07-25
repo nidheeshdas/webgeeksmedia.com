@@ -12,15 +12,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo size="md" />
+            <a href="/"><Logo size="md" /></a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 cursor-pointer">
-              <span>Services</span>
-              <ChevronDown className="w-4 h-4" />
-            </div>
+            <a href="/services" className="text-gray-700 hover:text-gray-900">
+              Services
+            </a>
             <a href="#" className="text-gray-700 hover:text-gray-900">
               About
             </a>
