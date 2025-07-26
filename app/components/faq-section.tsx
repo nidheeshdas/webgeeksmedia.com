@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown, ChevronUp, Minus, Plus } from "lucide-react"
 import { Button } from "~/components/ui/button"
 
 interface FAQItem {
@@ -94,51 +94,56 @@ export default function FAQSection({
   }
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-12 md:py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">{subtitle}</p>
-      </div>
+    <section className="bg-white">
+      <div className="container mx-auto px-4 py-[80px]">
 
-      <div className="space-y-4">
-        {data.map((item) => {
-          const isOpen = openItems.has(item.id)
-          return (
-            <div key={item.id} className="border border-gray-200 rounded-lg bg-white shadow-sm">
-              <Button
-                variant="ghost"
-                className="w-full p-6 text-left justify-between hover:bg-gray-50 h-auto"
-                onClick={() => toggleItem(item.id)}
-                aria-expanded={isOpen}
-                aria-controls={`faq-answer-${item.id}`}
-              >
-                <span className="text-gray-900 font-medium text-base md:text-lg pr-4">{item.question}</span>
-                <div className="flex-shrink-0 ml-4">
-                  {isOpen ? (
-                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                      <ChevronUp className="h-4 w-4 text-green-600" />
-                    </div>
-                  ) : (
-                    <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                      <ChevronDown className="h-4 w-4 text-gray-600" />
-                    </div>
-                  )}
-                </div>
-              </Button>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+          <p className="text-gray-600 text-lg  mx-auto">{subtitle}</p>
+        </div>
 
-              {isOpen && (
-                <div
-                  id={`faq-answer-${item.id}`}
-                  className="px-6 pb-6"
-                  role="region"
-                  aria-labelledby={`faq-question-${item.id}`}
+        <div className="space-y-4">
+          {data.map((item) => {
+            const isOpen = openItems.has(item.id)
+            return (
+              <div key={item.id} className="border border-gray-200 rounded-lg bg-white shadow-sm">
+                <Button
+                  variant="ghost"
+                  className="w-full p-6 text-left justify-between hover:bg-gray-50 h-auto px-[30px] py-[20px]"
+                  onClick={() => toggleItem(item.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${item.id}`}
                 >
-                  <div className="text-gray-700 leading-relaxed">{item.answer}</div>
-                </div>
-              )}
-            </div>
-          )
-        })}
+                  <span className="text-gray-900 font-medium text-base md:text-lg pr-4">{item.question}</span>
+                  <div className="flex-shrink-0 ml-4">
+                    {isOpen ? (
+                      <div className="w-8 h-8  bg-[#E3FED0] flex items-center justify-center">
+                        <Minus className="h-4 w-4 text-gray-600" />
+
+                      </div>
+                    ) : (
+                        <div className="w-8 h-8 bg-[#E3FED0] flex items-center justify-center">
+                          <Plus className="h-4 w-4 text-gray-600" />
+
+                      </div>
+                    )}
+                  </div>
+                </Button>
+
+                {isOpen && (
+                  <div
+                    id={`faq-answer-${item.id}`}
+                    className="px-6 pb-6 pt-[25px]"
+                    role="region"
+                    aria-labelledby={`faq-question-${item.id}`}
+                  >
+                    <div className="text-gray-700 leading-relaxed">{item.answer}</div>
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

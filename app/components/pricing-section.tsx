@@ -58,12 +58,14 @@ export default function PricingSection() {
             </div>
 
             {/* Pro Plan - Card Style */}
-            <div className="relative z-10 lg:-mt-[66px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 h-full transform scale-105 shadow-2xl text-white">
+            <div className="relative z-10 lg:-mt-[66px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl h-full transform scale-105 shadow-2xl text-white">
               {/* Badge */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              <div className="pt-[88px] px-[40px]">
+              <div className="absolute top-8 right-0 transform -translate-x-1/2">
+                  <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
                   MOST POPULAR
                 </div>
+
               </div>
 
               <div className="mb-8">
@@ -95,6 +97,7 @@ export default function PricingSection() {
               <Button className="w-full py-3 bg-white text-blue-600 hover:bg-gray-50 rounded-full font-semibold">
                 Choose Plan
               </Button>
+              </div>
             </div>
 
             {/* Premium Plan - Plain */}

@@ -53,7 +53,7 @@ export default function Component() {
             },
           ].map((item) => {
             return (
-              <div key={item.id} className="relative p-[2px] rounded-[20px]">
+              <div key={item.id} className="seo-block relative p-[2px] rounded-[20px]">
                 <div
                   className="rounded-[20px] p-8 text-left w-full h-full"
                   style={{
@@ -72,7 +72,7 @@ export default function Component() {
                 </div>
 
                 <style jsx>{`
-                  div.relative::before {
+                  .seo-block.relative::before {
                     content: "";
                     position: absolute;
                     inset: 0;
