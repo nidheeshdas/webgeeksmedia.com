@@ -1,0 +1,17 @@
+{
+    "name": "nidheeshdas/mailer",
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nidheeshdas\\Mailer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nidheeshdas",
+            "email": "nidheeshdas@gmail.com"
+        }
+    ]
+}

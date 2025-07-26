@@ -34,15 +34,15 @@ export default function WhyClients() {
 
                 <div
                   style={{
-                    position: "absolute",
-                    left: "2.5rem", // aligns with avatar
-                    bottom: "-12px",
-                    width: "49px",
-                    height: "55px",
-                    transform: "rotate(-19deg)",
-                    background:
-                      "linear-gradient(135deg, #FAF5FF 0%, #EFF6FF 100%)",
-                    zIndex: 1,
+                    position: 'absolute',
+                    left: '1.5rem',
+                    bottom: '-13px',
+                    width: '26px',
+                    height: '26px',
+                    transform: 'rotate(-45deg)',
+                    background: 'linear - gradient(135deg, #FAF5FF 0 %, #EFF6FF 100 %)',
+                    zIndex: '90',
+                    boxShadow: '#eaeaea -2px 2px 3px 0',
                   }}
                 />
               </div>
