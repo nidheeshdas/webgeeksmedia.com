@@ -1,10 +1,15 @@
-"use client";
+// "use client";
 
 import type React from "react";
 
 import { PhoneCall, Mail, ArrowRight } from "lucide-react";
+import TurnstileMod from "react-turnstile";
 import { useContactForm } from "~/hooks/useContactForm";
 import type { ContactFormProps } from "../types/contact-form";
+import { useState } from "react";
+
+const Turnstile = typeof TurnstileMod.default === 'function' ? TurnstileMod.default : TurnstileMod;
+console.log({ Turnstile });
 
 export default function ContactForm({
   onSubmit,
@@ -21,6 +26,7 @@ export default function ContactForm({
     validateForm,
     resetForm,
   } = useContactForm();
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,10 +39,16 @@ export default function ContactForm({
 
     try {
       if (onSubmit) {
-        await onSubmit(formData);
+        await onSubmit({
+          ...formData,
+          "cf-turnstile-response": turnstileToken,
+        });
       } else {
         // Default behavior - log to console
-        console.log("Form submitted:", formData);
+        console.log("Form submitted:", {
+          ...formData,
+          "cf-turnstile-response": turnstileToken,
+        });
         alert("Form submitted successfully!");
       }
       resetForm();
@@ -204,10 +216,16 @@ export default function ContactForm({
                   )}
                 </div>
 
+                {/* Turnstile Widget */}
+                <Turnstile
+                  sitekey="0x4AAAAAABmlzHbo3c-aQEBP"
+                  onVerify={(token) => setTurnstileToken(token)}
+                />
+
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !turnstileToken}
                   className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 mt-5"
                 >
                   {isSubmitting ? (

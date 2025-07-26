@@ -5,13 +5,38 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-if ($_POST || true) {
-    $name = $_POST['name'] ?? "test name";
-    $email = $_POST['email'] ?? "nidheeshdas@gmail.com";
-    $subject = $_POST['subject'] ?? "test subject";
-    $message = $_POST['message'] ?? "test message";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Cloudflare Turnstile verification
+    $turnstile_response = $_POST['cf-turnstile-response'] ?? null;
+    if (!$turnstile_response) {
+        echo "Turnstile token not found.";
+        exit;
+    }
 
-    // Validate inputs
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://challenges.cloudflare.com/turnstile/v2/api/siteverify");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+        'secret' => '0x4AAAAAABmlzH060FfaMi4h6GrqLrzeQn0', // Replace with your secret key
+        'response' => $turnstile_response,
+    ]));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    $result = json_decode($response, true);
+
+    if (!isset($result['success']) || $result['success'] !== true) {
+        echo "Turnstile verification failed.";
+        exit;
+    }
+
+    // Sanitize and validate inputs
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         echo "All fields are required.";
         exit;
