@@ -1,11 +1,11 @@
-import { useState } from "react"
-import { ChevronDown, ChevronUp, Minus, Plus } from "lucide-react"
-import { Button } from "~/components/ui/button"
+import { useState } from "react";
+import { Minus, Plus } from "lucide-react";
+import { Button } from "~/components/ui/button";
 
 interface FAQItem {
-  id: string
-  question: string
-  answer: string
+  id: string;
+  question: string;
+  answer: string;
 }
 
 const faqData: FAQItem[] = [
@@ -18,7 +18,8 @@ const faqData: FAQItem[] = [
   {
     id: "2",
     question: "Can you help with implementation too?",
-    answer: "Not directly. Our audits are meant to guide your team or SEO partner with a clear and actionable roadmap.",
+    answer:
+      "Not directly. Our audits are meant to guide your team or SEO partner with a clear and actionable roadmap.",
   },
   {
     id: "3",
@@ -28,7 +29,8 @@ const faqData: FAQItem[] = [
   },
   {
     id: "4",
-    question: "How quickly will I see results after applying the audit recommendations?",
+    question:
+      "How quickly will I see results after applying the audit recommendations?",
     answer:
       "Most clients begin to see positive changes within 4—8 weeks, with more substantial results typically appearing in 6-8 months. SEO is a long game, but the right moves pay off.",
   },
@@ -68,12 +70,12 @@ const faqData: FAQItem[] = [
     answer:
       "For the Essential Audit, we offer a 100% no-questions-asked money-back guarantee if you're not satisfied. (We rarely have to use it.)",
   },
-]
+];
 
 interface FAQSectionProps {
-  data?: FAQItem[]
-  title?: string
-  subtitle?: string
+  data?: FAQItem[];
+  title?: string;
+  subtitle?: string;
 }
 
 export default function FAQSection({
@@ -81,50 +83,54 @@ export default function FAQSection({
   title = "Frequently Asked Questions",
   subtitle = "Have questions? Our FAQs might just have the answers. Let's unlock your website's full potential.",
 }: FAQSectionProps) {
-  const [openItems, setOpenItems] = useState<Set<string>>(new Set())
+  const [openItems, setOpenItems] = useState<Set<string>>(new Set());
 
   const toggleItem = (id: string) => {
-    const newOpenItems = new Set(openItems)
+    const newOpenItems = new Set(openItems);
     if (newOpenItems.has(id)) {
-      newOpenItems.delete(id)
+      newOpenItems.delete(id);
     } else {
-      newOpenItems.add(id)
+      newOpenItems.add(id);
     }
-    setOpenItems(newOpenItems)
-  }
+    setOpenItems(newOpenItems);
+  };
 
   return (
     <section className="bg-white">
       <div className="container mx-auto px-4 py-[80px]">
-
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {title}
+          </h2>
           <p className="text-gray-600 text-lg  mx-auto">{subtitle}</p>
         </div>
 
         <div className="space-y-4">
           {data.map((item) => {
-            const isOpen = openItems.has(item.id)
+            const isOpen = openItems.has(item.id);
             return (
-              <div key={item.id} className="border border-gray-200 rounded-lg bg-white shadow-sm">
+              <div
+                key={item.id}
+                className="rounded-[10.834px] border-2 border-[#F1F1F3] bg-white"
+              >
                 <Button
                   variant="ghost"
-                  className="w-full p-6 text-left justify-between hover:bg-gray-50 h-auto px-[30px] py-[20px]"
+                  className="w-full text-left justify-between hover:bg-gray-50 h-auto px-7 py-5 focus:outline-none focus:ring-0 focus:border-transparent hover:bg-transparent cursor-pointer"
                   onClick={() => toggleItem(item.id)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
                 >
-                  <span className="text-gray-900 font-medium text-base md:text-lg pr-4">{item.question}</span>
+                  <span className="text-[#262626] font-bold text-base md:text-lg pr-4">
+                    {item.question}
+                  </span>
                   <div className="flex-shrink-0 ml-4">
                     {isOpen ? (
                       <div className="w-8 h-8  bg-[#E3FED0] flex items-center justify-center">
                         <Minus className="h-4 w-4 text-gray-600" />
-
                       </div>
                     ) : (
-                        <div className="w-8 h-8 bg-[#E3FED0] flex items-center justify-center">
-                          <Plus className="h-4 w-4 text-gray-600" />
-
+                      <div className="w-8 h-8 bg-[#E3FED0] flex items-center justify-center">
+                        <Plus className="h-4 w-4 text-gray-600" />
                       </div>
                     )}
                   </div>
@@ -133,18 +139,20 @@ export default function FAQSection({
                 {isOpen && (
                   <div
                     id={`faq-answer-${item.id}`}
-                    className="px-6 pb-6 pt-[25px]"
+                    className="px-7"
                     role="region"
                     aria-labelledby={`faq-question-${item.id}`}
                   >
-                    <div className="text-gray-700 leading-relaxed">{item.answer}</div>
+                    <div className="text-[#1B1B1F] py-6 leading-relaxed border-t-2 border-[#F1F1F3] pt-6">
+                      {item.answer}
+                    </div>
                   </div>
                 )}
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
