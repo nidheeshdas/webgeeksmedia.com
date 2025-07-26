@@ -6,7 +6,7 @@ export default function WhyClients() {
         <div className="grid lg:grid-cols-2 gap-1 items-start">
           {/* Left Column */}
           <div className={"lg:max-w-[442px]"}>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-[48px]">
+            <h2 className="text-[40px] md:text-5xl font-bold text-gray-900 mb-8 leading-[48px]">
               Why Clients <br />
               <span className="text-blue-600">Love Us</span>
             </h2>
@@ -48,9 +48,7 @@ export default function WhyClients() {
               </div>
 
               <div className="flex items-center relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-4 flex items-center justify-center text-white font-bold text-lg">
-                  SB
-                </div>
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] mr-4 flex items-center justify-center text-white font-bold text-lg bg-[url('../../public/images/santhoshi.png')] bg-cover bg-center bg-no-repeat"></div>
                 <div>
                   <div className="font-bold text-gray-900 text-lg">
                     Sanjay Bhatgaonkar

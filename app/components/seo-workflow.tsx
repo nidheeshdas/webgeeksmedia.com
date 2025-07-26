@@ -3,11 +3,11 @@ export default function Component() {
     <section className="bg-white from-gray-50 to-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">
+        <div className="text-center mb-16">
+          <h2 className="lg:text-[40px]  md:text-3xl font-medium text-gray-900 mb-4">
             Our SEO Audit Workflow
           </h2>
-          <p className="text-lg text-[#333333] mx-auto">
+          <p className="text-gray-600 text-xl  mx-auto">
             A simple process designed to uncover growth opportunities and turn
             insights into real results.
           </p>
@@ -53,7 +53,10 @@ export default function Component() {
             },
           ].map((item) => {
             return (
-              <div key={item.id} className="seo-block relative p-[2px] rounded-[20px]">
+              <div
+                key={item.id}
+                className="seo-block relative p-[2px] rounded-[20px]"
+              >
                 <div
                   className="rounded-[20px] p-8 text-left w-full h-full"
                   style={{
