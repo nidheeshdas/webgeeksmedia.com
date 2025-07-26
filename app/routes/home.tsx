@@ -31,7 +31,11 @@ export default function Home() {
       </Hero>
       <Services />
       <WhyClients />
-      <CTA />
+      <CTA
+        price={49}
+        content="Let us earn your trust"
+        priceText={"Starting With Just "}
+      />
       <Footer />
     </main>
   );

@@ -88,7 +88,7 @@ a, button {
 /* Ensure touch targets are at least 44px for accessibility */
 button, a {
   /* min-height: 44px; - needed? service */
-  min-width: 44px;
+  /* min-width: 44px; */
   /* color: #333; */
 font-size: 17px;
 font-style: normal;

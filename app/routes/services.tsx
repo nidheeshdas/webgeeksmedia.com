@@ -26,7 +26,11 @@ export default function Services() {
       <SeoWorkflow />
       <Pricing />
       <FAQ />
-      <CTA />
+      <CTA
+        price={49}
+        priceText={"Starting With Just "}
+        content="Ready to See What’s Really Holding Your Website Back?"
+      />
       <Footer />
     </main>
   );
