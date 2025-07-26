@@ -27,7 +27,9 @@ export default function Services() {
       <Pricing />
       <FAQ />
       <CTA
+        buttonText={`Get Started for $49`}
         price={49}
+        showIcon={true}
         priceText={"Starting With Just "}
         content="Ready to See What’s Really Holding Your Website Back?"
       />

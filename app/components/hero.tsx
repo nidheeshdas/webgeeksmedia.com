@@ -15,7 +15,7 @@ export default function Hero(props) {
       }}
     >
       <Header />
-      <div className="flex flex-col items-center gap-[50px] mt-16 pb-16 text-center">
+      <div className="flex flex-col items-center gap-[50px] mt-16 pb-16 px-9 text-center">
         {props.children || "Hi"}
       </div>
     </section>

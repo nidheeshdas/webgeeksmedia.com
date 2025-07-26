@@ -6,7 +6,7 @@ export default function WhyClients() {
         <div className="grid lg:grid-cols-2 gap-1 items-start">
           {/* Left Column */}
           <div className={"lg:max-w-[442px]"}>
-            <h2 className="text-[40px] md:text-5xl font-bold text-gray-900 mb-8 leading-[48px]">
+            <h2 className="text-[40px] font-bold text-gray-900 mb-8 leading-[48px]">
               Why Clients <br />
               <span className="text-blue-600">Love Us</span>
             </h2>
@@ -34,15 +34,16 @@ export default function WhyClients() {
 
                 <div
                   style={{
-                    position: 'absolute',
-                    left: '1.5rem',
-                    bottom: '-13px',
-                    width: '26px',
-                    height: '26px',
-                    transform: 'rotate(-45deg)',
-                    background: 'linear - gradient(135deg, #FAF5FF 0 %, #EFF6FF 100 %)',
-                    zIndex: '90',
-                    boxShadow: '#eaeaea -2px 2px 3px 0',
+                    position: "absolute",
+                    left: "1.5rem",
+                    bottom: "-13px",
+                    width: "26px",
+                    height: "26px",
+                    transform: "rotate(-45deg)",
+                    background:
+                      "linear - gradient(135deg, #FAF5FF 0 %, #EFF6FF 100 %)",
+                    zIndex: "90",
+                    boxShadow: "#eaeaea -2px 2px 3px 0",
                   }}
                 />
               </div>
