@@ -4,7 +4,7 @@ export default function Component() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="lg:text-[40px]  md:text-3xl font-medium text-gray-900 mb-4">
+          <h2 className="text-[40px] font-medium text-gray-900 mb-4">
             Our SEO Audit Workflow
           </h2>
           <p className="text-gray-600 text-xl  mx-auto">

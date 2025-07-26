@@ -86,7 +86,7 @@ export default function Services() {
     <section className="bg-[#f8f8f8]">
       <div className="container mx-auto px-4 py-[80px]">
         <div className="text-center mb-16">
-          <h2 className="text-[40px] md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[40px] font-bold text-gray-900 mb-4">
             Our Core Services
           </h2>
           <p className="text-lg text-gray-600 mx-auto">
