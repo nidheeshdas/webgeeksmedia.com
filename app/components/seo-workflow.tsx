@@ -81,7 +81,7 @@ export default function Component() {
                     inset: 0;
                     padding: 1.5px;
                     border-radius: 20px;
-                    background: linear-gradient(118deg,rgba(230, 116, 116, 1) 0%, rgba(170, 63, 254, 1) 12%, rgba(170, 63, 254, 1) 22%, rgba(255, 255, 255, 0) 30%);
+                    background: linear-gradient(118deg,rgba(230, 116, 116, 1) 0%, rgba(170, 63, 254, 1) 6%, rgba(170, 63, 254, 1) 11%, rgba(255, 255, 255, 0) 30%);
                     -webkit-mask: linear-gradient(#fff 0 0) content-box,
                       linear-gradient(#fff 0 0);
                     -webkit-mask-composite: xor;
