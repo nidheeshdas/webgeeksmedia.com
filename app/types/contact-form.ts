@@ -13,6 +13,7 @@ export interface FormErrors {
   subject?: string
   country?: string
   message?: string
+  submit?: string
 }
 
 export interface ContactFormProps {

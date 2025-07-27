@@ -3,16 +3,13 @@
 import type React from "react";
 
 import { PhoneCall, Mail, ArrowRight } from "lucide-react";
-import TurnstileMod from "react-turnstile";
 import { useContactForm } from "~/hooks/useContactForm";
 import type { ContactFormProps } from "../types/contact-form";
 import { useState } from "react";
+import { Turnstile } from '@marsidev/react-turnstile';
 
-const Turnstile = typeof TurnstileMod.default === 'function' ? TurnstileMod.default : TurnstileMod;
-console.log({ Turnstile });
 
 export default function ContactForm({
-  onSubmit,
   className = "",
 }: ContactFormProps) {
   const {
@@ -25,6 +22,8 @@ export default function ContactForm({
     handleFieldBlur,
     validateForm,
     resetForm,
+    onSubmit,
+    success
   } = useContactForm();
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
@@ -39,7 +38,7 @@ export default function ContactForm({
 
     try {
       if (onSubmit) {
-        await onSubmit({
+        onSubmit({
           ...formData,
           "cf-turnstile-response": turnstileToken,
         });
@@ -218,8 +217,8 @@ export default function ContactForm({
 
                 {/* Turnstile Widget */}
                 <Turnstile
-                  sitekey="0x4AAAAAABmlzHbo3c-aQEBP"
-                  onVerify={(token) => setTurnstileToken(token)}
+                  siteKey="0x4AAAAAABmlzHbo3c-aQEBP"
+                  onSuccess={(token) => setTurnstileToken(token)}
                 />
 
                 {/* Submit Button */}
@@ -240,6 +239,14 @@ export default function ContactForm({
                     </>
                   )}
                 </button>
+                {errors.submit && (
+                  <div className="w-full"><p className="mt-1 text-sm text-red-600">{errors.submit}</p></div>
+                )}
+                {success && (
+                  <div className="w-full bg-green-50 border border-green-200 rounded-lg p-3">
+                    <p className="text-sm text-green-700">{success}</p>
+                  </div>
+                )}
               </div>
             </form>
           </div>
