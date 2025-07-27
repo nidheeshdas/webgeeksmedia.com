@@ -54,6 +54,9 @@ export const validateMessage = (message: string): ValidationResult => {
 }
 
 export const validateCountry = (country: string): ValidationResult => {
+  if (!country.trim()) {
+    return { isValid: false, error: "Country is required" }
+  }
   if (country.trim().length > 50) {
     return { isValid: false, error: "Country must be less than 50 characters" }
   }
