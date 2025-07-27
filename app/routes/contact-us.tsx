@@ -19,7 +19,31 @@ export default function ContactUs() {
           </p>
         </div>
       </Hero>
-      <Contact />
+      <Contact
+        onSubmit={(body) => {
+          fetch("/mailer/send.php", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams(body as any),
+          })
+            .then(async (res) => {
+              const message = await res.text();
+              if (!res.ok) {
+                throw new Error(message);
+              }
+              return message;
+            })
+            .then((message) => {
+              alert(message);
+            })
+            .catch((err) => {
+              console.error(err);
+              alert(err.message || "Error sending message");
+            });
+        }}
+      />
       {/* <CTA /> */}
       <Footer />
     </main>

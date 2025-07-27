@@ -1,9 +1,10 @@
 export interface FormData {
-  name: string
-  email: string
-  subject: string
-  country: string
-  message: string
+  name: string;
+  email: string;
+  subject: string;
+  country: string;
+  message: string;
+  "cf-turnstile-response"?: string | null;
 }
 
 export interface FormErrors {
