@@ -18,36 +18,113 @@ export default function WhyClients() {
             </p>
 
             <div className="lg:w-[442px] lg:h-[140px]">
-              <svg width="462" height="191" viewBox="0 0 462 191" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_d_82_259)">
-              <path d="M94.626 144H25C16.7157 144 10 137.284 10 129V19C10 10.7157 16.7157 4 25 4H437C445.284 4.00001 452 10.7157 452 19V129C452 137.284 445.284 144 437 144H122.072L88.9082 173.733L94.626 144Z" fill="white"/>
-              <path d="M94.626 144H25C16.7157 144 10 137.284 10 129V19C10 10.7157 16.7157 4 25 4H437C445.284 4.00001 452 10.7157 452 19V129C452 137.284 445.284 144 437 144H122.072L88.9082 173.733L94.626 144Z" fill="url(#paint0_linear_82_259)"/>
-              <path d="M94.626 144L95.117 144.094L95.2313 143.5H94.626V144ZM25 144V144.5V144ZM10 129H9.5H10ZM10 19H9.5H10ZM25 4V3.5V4ZM437 4V3.5V4ZM452 19H452.5H452ZM452 129H452.5H452ZM437 144V144.5V144ZM122.072 144V143.5H121.881L121.738 143.628L122.072 144ZM88.9082 173.733L88.4172 173.639L88.1369 175.096L89.242 174.106L88.9082 173.733ZM94.626 144V143.5H25V144V144.5H94.626V144ZM25 144V143.5C16.9919 143.5 10.5 137.008 10.5 129H10H9.5C9.5 137.56 16.4396 144.5 25 144.5V144ZM10 129H10.5V19H10H9.5V129H10ZM10 19H10.5C10.5 10.9919 16.9919 4.5 25 4.5V4V3.5C16.4396 3.5 9.5 10.4396 9.5 19H10ZM25 4V4.5H437V4V3.5H25V4ZM437 4V4.5C445.008 4.50001 451.5 10.9919 451.5 19H452H452.5C452.5 10.4396 445.56 3.50001 437 3.5V4ZM452 19H451.5V129H452H452.5V19H452ZM452 129H451.5C451.5 137.008 445.008 143.5 437 143.5V144V144.5C445.56 144.5 452.5 137.56 452.5 129H452ZM437 144V143.5H122.072V144V144.5H437V144ZM122.072 144L121.738 143.628L88.5744 173.361L88.9082 173.733L89.242 174.106L122.406 144.372L122.072 144ZM88.9082 173.733L89.3992 173.828L95.117 144.094L94.626 144L94.135 143.906L88.4172 173.639L88.9082 173.733Z" fill="#AA3FFE"/>
-              <path d="M94.626 144L95.117 144.094L95.2313 143.5H94.626V144ZM25 144V144.5V144ZM10 129H9.5H10ZM10 19H9.5H10ZM25 4V3.5V4ZM437 4V3.5V4ZM452 19H452.5H452ZM452 129H452.5H452ZM437 144V144.5V144ZM122.072 144V143.5H121.881L121.738 143.628L122.072 144ZM88.9082 173.733L88.4172 173.639L88.1369 175.096L89.242 174.106L88.9082 173.733ZM94.626 144V143.5H25V144V144.5H94.626V144ZM25 144V143.5C16.9919 143.5 10.5 137.008 10.5 129H10H9.5C9.5 137.56 16.4396 144.5 25 144.5V144ZM10 129H10.5V19H10H9.5V129H10ZM10 19H10.5C10.5 10.9919 16.9919 4.5 25 4.5V4V3.5C16.4396 3.5 9.5 10.4396 9.5 19H10ZM25 4V4.5H437V4V3.5H25V4ZM437 4V4.5C445.008 4.50001 451.5 10.9919 451.5 19H452H452.5C452.5 10.4396 445.56 3.50001 437 3.5V4ZM452 19H451.5V129H452H452.5V19H452ZM452 129H451.5C451.5 137.008 445.008 143.5 437 143.5V144V144.5C445.56 144.5 452.5 137.56 452.5 129H452ZM437 144V143.5H122.072V144V144.5H437V144ZM122.072 144L121.738 143.628L88.5744 173.361L88.9082 173.733L89.242 174.106L122.406 144.372L122.072 144ZM88.9082 173.733L89.3992 173.828L95.117 144.094L94.626 144L94.135 143.906L88.4172 173.639L88.9082 173.733Z" fill="url(#paint1_linear_82_259)"/>
-              </g>
-              <text fill="#433b69" xml:space="preserve" style={{"whiteSpace": "pre"}} font-family="Satoshi Variable" font-size="17" font-weight="500" letter-spacing="0em"><tspan x="33" y="44.045">The SEO audit from WebGeeksMedia gave us deep, </tspan><tspan x="33" y="67.045">actionable insights we had completely overlooked. </tspan><tspan x="33" y="90.045">Highly recommended if you&#x2019;re serious about </tspan><tspan x="33" y="113.045">improving your site.</tspan></text>
-              <defs>
-              <filter id="filter0_d_82_259" x="0.5" y="0.5" width="461" height="189.596" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="6"/>
-              <feGaussianBlur stdDeviation="4.5"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_82_259"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_82_259" result="shape"/>
-              </filter>
-              <linearGradient id="paint0_linear_82_259" x1="100.038" y1="134.022" x2="129.595" y2="166.989" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FAF5FF"/>
-              <stop offset="1" stop-color="#EFF6FF"/>
-              </linearGradient>
-              <linearGradient id="paint1_linear_82_259" x1="10" y1="88.8667" x2="452" y2="88.8667" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#E67474"/>
-              <stop offset="1" stop-color="#AA3FFE"/>
-              </linearGradient>
-              </defs>
+              <svg
+                width="462"
+                height="191"
+                viewBox="0 0 462 191"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_82_259)">
+                  <path
+                    d="M94.626 144H25C16.7157 144 10 137.284 10 129V19C10 10.7157 16.7157 4 25 4H437C445.284 4.00001 452 10.7157 452 19V129C452 137.284 445.284 144 437 144H122.072L88.9082 173.733L94.626 144Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M94.626 144H25C16.7157 144 10 137.284 10 129V19C10 10.7157 16.7157 4 25 4H437C445.284 4.00001 452 10.7157 452 19V129C452 137.284 445.284 144 437 144H122.072L88.9082 173.733L94.626 144Z"
+                    fill="url(#paint0_linear_82_259)"
+                  />
+                  <path
+                    d="M94.626 144L95.117 144.094L95.2313 143.5H94.626V144ZM25 144V144.5V144ZM10 129H9.5H10ZM10 19H9.5H10ZM25 4V3.5V4ZM437 4V3.5V4ZM452 19H452.5H452ZM452 129H452.5H452ZM437 144V144.5V144ZM122.072 144V143.5H121.881L121.738 143.628L122.072 144ZM88.9082 173.733L88.4172 173.639L88.1369 175.096L89.242 174.106L88.9082 173.733ZM94.626 144V143.5H25V144V144.5H94.626V144ZM25 144V143.5C16.9919 143.5 10.5 137.008 10.5 129H10H9.5C9.5 137.56 16.4396 144.5 25 144.5V144ZM10 129H10.5V19H10H9.5V129H10ZM10 19H10.5C10.5 10.9919 16.9919 4.5 25 4.5V4V3.5C16.4396 3.5 9.5 10.4396 9.5 19H10ZM25 4V4.5H437V4V3.5H25V4ZM437 4V4.5C445.008 4.50001 451.5 10.9919 451.5 19H452H452.5C452.5 10.4396 445.56 3.50001 437 3.5V4ZM452 19H451.5V129H452H452.5V19H452ZM452 129H451.5C451.5 137.008 445.008 143.5 437 143.5V144V144.5C445.56 144.5 452.5 137.56 452.5 129H452ZM437 144V143.5H122.072V144V144.5H437V144ZM122.072 144L121.738 143.628L88.5744 173.361L88.9082 173.733L89.242 174.106L122.406 144.372L122.072 144ZM88.9082 173.733L89.3992 173.828L95.117 144.094L94.626 144L94.135 143.906L88.4172 173.639L88.9082 173.733Z"
+                    fill="#AA3FFE"
+                  />
+                  <path
+                    d="M94.626 144L95.117 144.094L95.2313 143.5H94.626V144ZM25 144V144.5V144ZM10 129H9.5H10ZM10 19H9.5H10ZM25 4V3.5V4ZM437 4V3.5V4ZM452 19H452.5H452ZM452 129H452.5H452ZM437 144V144.5V144ZM122.072 144V143.5H121.881L121.738 143.628L122.072 144ZM88.9082 173.733L88.4172 173.639L88.1369 175.096L89.242 174.106L88.9082 173.733ZM94.626 144V143.5H25V144V144.5H94.626V144ZM25 144V143.5C16.9919 143.5 10.5 137.008 10.5 129H10H9.5C9.5 137.56 16.4396 144.5 25 144.5V144ZM10 129H10.5V19H10H9.5V129H10ZM10 19H10.5C10.5 10.9919 16.9919 4.5 25 4.5V4V3.5C16.4396 3.5 9.5 10.4396 9.5 19H10ZM25 4V4.5H437V4V3.5H25V4ZM437 4V4.5C445.008 4.50001 451.5 10.9919 451.5 19H452H452.5C452.5 10.4396 445.56 3.50001 437 3.5V4ZM452 19H451.5V129H452H452.5V19H452ZM452 129H451.5C451.5 137.008 445.008 143.5 437 143.5V144V144.5C445.56 144.5 452.5 137.56 452.5 129H452ZM437 144V143.5H122.072V144V144.5H437V144ZM122.072 144L121.738 143.628L88.5744 173.361L88.9082 173.733L89.242 174.106L122.406 144.372L122.072 144ZM88.9082 173.733L89.3992 173.828L95.117 144.094L94.626 144L94.135 143.906L88.4172 173.639L88.9082 173.733Z"
+                    fill="url(#paint1_linear_82_259)"
+                  />
+                </g>
+                <text
+                  fill="#433b69"
+                  xml:space="preserve"
+                  style={{ whiteSpace: "pre" }}
+                  font-family="Satoshi Variable"
+                  font-size="17"
+                  font-weight="500"
+                  letter-spacing="0em"
+                >
+                  <tspan x="33" y="44.045">
+                    The SEO audit from WebGeeksMedia gave us deep,{" "}
+                  </tspan>
+                  <tspan x="33" y="67.045">
+                    actionable insights we had completely overlooked.{" "}
+                  </tspan>
+                  <tspan x="33" y="90.045">
+                    Highly recommended if you&#x2019;re serious about{" "}
+                  </tspan>
+                  <tspan x="33" y="113.045">
+                    improving your site.
+                  </tspan>
+                </text>
+                <defs>
+                  <filter
+                    id="filter0_d_82_259"
+                    x="0.5"
+                    y="0.5"
+                    width="461"
+                    height="189.596"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="6" />
+                    <feGaussianBlur stdDeviation="4.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_82_259"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_82_259"
+                      result="shape"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_82_259"
+                    x1="100.038"
+                    y1="134.022"
+                    x2="129.595"
+                    y2="166.989"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FAF5FF" />
+                    <stop offset="1" stop-color="#EFF6FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_82_259"
+                    x1="10"
+                    y1="88.8667"
+                    x2="452"
+                    y2="88.8667"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E67474" />
+                    <stop offset="1" stop-color="#AA3FFE" />
+                  </linearGradient>
+                </defs>
               </svg>
-
 
               {/* <div className="relative mb-6 max-w-[600px]">
                 <p
@@ -56,7 +133,7 @@ export default function WhyClients() {
                     background:
                       "linear-gradient(135deg, #FAF5FF 0%, #EFF6FF 100%)",
                   }}
-                  className="text-gray-700 text-base leading-normal p-6 shadow relative z-10"
+                  className="text-gray-700 text-[17px] font-medium leading-normal  p-6 shadow relative z-10 "
                 >
                   The SEO audit from WebGeeksMedia gave us deep, actionable
                   insights we had completely overlooked. Highly recommended if
@@ -113,14 +190,14 @@ export default function WhyClients() {
                   index == benefits.length - 1 ? "last-item" : "mb-[47px]"
                 }`}
               >
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-[56px] h-[56px] bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">
+                  <h3 className="text-black text-[24px] leading-[32px] font-bold mb-[9px]">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-[17px] font-normal leading-normal ">
                     {benefit.description}
                   </p>
                 </div>
