@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://challenges.cloudflare.com/turnstile/v2/api/siteverify");
+    curl_setopt($ch, CURLOPT_URL, "https://challenges.cloudflare.com/turnstile/v0/siteverify");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
         'secret' => '0x4AAAAAABmlzH060FfaMi4h6GrqLrzeQn0', // Replace with your secret key
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = json_decode($response, true);
 
     if (!isset($result['success']) || $result['success'] !== true) {
-        echo "Turnstile verification failed.";
+        echo "Turnstile verification failed. Res=" . $response;
         exit;
     }
 
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ";
 
         $mail->send();
-        // echo 'Message has been sent successfully!';
+        echo 'Message has been sent successfully!';
 
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
