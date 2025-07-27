@@ -33,6 +33,8 @@ export default function Home() {
       <WhyClients />
       <CTA
         price={49}
+        showIcon={false}
+        buttonText={"Start Now"}
         content="Let us earn your trust"
         priceText={"Starting With Just "}
       />
