@@ -49,7 +49,7 @@ export default function WhyClients() {
               </div>
 
               <div className="flex items-center relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] mr-4 flex items-center justify-center text-white font-bold text-lg bg-[url('../../public/images/santhoshi.png')] bg-cover bg-center bg-no-repeat"></div>
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] mr-4 flex items-center justify-center text-white font-bold text-lg bg-[url('/images/santhoshi.png')] bg-cover bg-center bg-no-repeat"></div>
                 <div>
                   <div className="font-bold text-gray-900 text-lg">
                     Sanjay Bhatgaonkar

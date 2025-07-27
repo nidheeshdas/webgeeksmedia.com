@@ -20,7 +20,7 @@ export function TestimonialCard() {
       </div>
       <div className="flex items-center gap-[26px] mt-[15px]">
         <img
-          src={"../../../public/images/santhoshi"}
+          src={"/images/santhoshi"}
           alt="Sanjay Bhatgaonkar"
           className="w-[91px] h-[91px]"
         />

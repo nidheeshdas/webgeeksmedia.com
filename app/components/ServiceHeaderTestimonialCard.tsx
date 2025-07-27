@@ -30,7 +30,7 @@ export default function TestimonialCard() {
       </div>
 
       <div className="flex items-center justify-center mt-6">
-        <div className="w-14 h-14 bg-gradient-to-br from-blue-400 mr-4 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] flex items-center justify-center text-white font-bold text-lg bg-[url('../../public/images/rohith.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="w-14 h-14 bg-gradient-to-br from-blue-400 mr-4 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] flex items-center justify-center text-white font-bold text-lg bg-[url('/images/rohith.png')] bg-cover bg-center bg-no-repeat"></div>
         <span className="text-[14px] text-gray-800 font-bold">
           Rohit Langde,
         </span>

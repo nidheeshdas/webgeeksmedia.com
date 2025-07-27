@@ -16,7 +16,7 @@ export default function Component() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Years of Experience */}
-          <div className="leading-relaxed bg-[#ffffff] lg:w-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
+          <div className="leading-relaxed bg-[#ffffff]  lg:w-m-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
             <div className="flex items-start gap-[30px]">
               <div className="text-5xl font-bold text-[#2461E9]">15+</div>
               <div>
@@ -32,7 +32,7 @@ export default function Component() {
           </div>
 
           {/* Satisfaction Rate */}
-          <div className="leading-relaxed bg-[#ffffff] lg:w-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
+          <div className="leading-relaxed bg-[#ffffff]  lg:w-m-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
             <div className="flex items-start gap-6">
               <div className="text-5xl font-bold text-[#2461E9]">99%</div>
               <div>
@@ -48,7 +48,7 @@ export default function Component() {
           </div>
 
           {/* Client Retention */}
-          <div className="leading-relaxed bg-[#ffffff] lg:w-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
+          <div className="leading-relaxed bg-[#ffffff]  lg:w-m-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white">
             <div className="flex items-start gap-6">
               <div className="text-5xl font-bold text-[#2461E9]">75%</div>
               <div>
@@ -64,7 +64,7 @@ export default function Component() {
           </div>
 
           {/* SEO Audits */}
-          <div className="bg-[#ffffff] lg:w-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white leading-relaxed">
+          <div className="bg-[#ffffff]  lg:w-m-[585px] px-[50px] py-[40px] rounded-[20px] border-r-[4px] border-b-[4px] border-r-[#D7C8FF] border-b-[#D7C8FF] border-t-0 border-l-0 bg-white leading-relaxed">
             <div className="flex items-start gap-6">
               <div className="text-5xl font-bold text-[#2461E9]">150+</div>
               <div>
