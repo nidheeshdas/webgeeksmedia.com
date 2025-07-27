@@ -14,7 +14,7 @@ export default function CTA(props) {
               <p className="text-[#CCC] text-[28px] md:text-[36px] font-medium leading-[40px]">
                 {props.content}
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
                 {props.priceText}
                 <span className="text-yellow-400">${props.price}</span>
               </h2>
@@ -28,8 +28,8 @@ export default function CTA(props) {
             <div className="relative">
               <div className="w-64 h-64 bg-gradient-to-br from-green-200 to-blue-200 rounded-full mx-auto flex items-center justify-center">
                 <div className="flex items-center space-x-4">
-                  <Zap className="w-12 h-12 text-blue-600" />
-                  <TrendingUp className="w-12 h-12 text-blue-600" />
+                  <Zap className="w-20 h-20 text-blue-600" />
+                  <TrendingUp className="w-20 h-20 text-blue-600" />
                 </div>
               </div>
             </div>
