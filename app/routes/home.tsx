@@ -6,6 +6,9 @@ import CTA from "~/components/cta";
 import Footer from "~/components/footer";
 import { Button } from "~/components/ui/button";
 import { Rocket } from "lucide-react";
+import { Link } from "react-router";
+
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -22,12 +25,12 @@ export default function Home() {
             partner.
           </p>
         </div>
-        <a href="/services">
+        <Link to="/audit-service">
           <Button className="cursor-ponter bg-white text-gray-900 p-4 rounded-[30px] border-2 border-[#E67474] bg-white shadow-[0_4px_15px_rgba(0,0,0,0.15) hover:bg-[#E67474]/10 transition-colors">
             <Rocket className="mr-1 text-pink-500" />
             Explore Services
           </Button>
-        </a>
+        </Link>
       </Hero>
       <Services />
       <WhyClients />
@@ -37,6 +40,7 @@ export default function Home() {
         buttonText={"Start Now"}
         content="Let us earn your trust"
         priceText={"Starting With Just "}
+        buttonNavigateTo="/contact-us"
       />
       <Footer />
     </main>

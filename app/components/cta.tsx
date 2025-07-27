@@ -1,7 +1,10 @@
 import { Button } from "~/components/ui/button";
 import { Zap, TrendingUp, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router";
 
 export default function CTA(props) {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-[#f8f8f8]">
       <div className="container mx-auto px-4 py-[80px]">
@@ -15,7 +18,7 @@ export default function CTA(props) {
                 {props.priceText}
                 <span className="text-yellow-400">${props.price}</span>
               </h2>
-              <Button className="h-[50px] m-w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full">
+              <Button onClick={() => navigate(props.buttonNavigateTo)} className="h-[50px] m-w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full">
                 {props.buttonText}{" "}
                 {props.showIcon ? <ArrowRight className="w-5 h-5" /> : null}
               </Button>
