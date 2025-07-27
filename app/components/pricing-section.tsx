@@ -17,24 +17,27 @@ export default function PricingSection() {
           </p>
         </div>
         {/* Pricing Cards */}
-        <section className="bg-white mt-32 rounded-[34px] ">
-          <div className="grid md:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
+        <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[55px] px-[49px]">
+          <div className="flex flex-col md:flex-row gap-10">
             {/* Essential Plan - Plain */}
-            <div className="p-8">
-              <div className="mb-8">
-                <div className="flex items-baseline mb-2">
-                  <span className="text-4xl font-bold text-gray-900">$49</span>
-                  <span className="text-gray-500 ml-2">/One time</span>
+            <div className="grid gap-[27px] basis-full md:basis-[30%]">
+              <div>
+                <div className="flex items-baseline">
+                  <span className="text-5xl font-bold text-[#231D4F]">$49</span>
+                  <span className="text-[#848199] ml-2 text-[22px]">
+                    /One time
+                  </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              </div>
+              <div>
+                <h3 className="text-[40px] font-bold text-[#231D4F] mb-3">
                   Essential
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[#848199] text-xl font-medium">
                   Quick, actionable SEO insights to build your foundation.
                 </p>
               </div>
-
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4">
                 {[
                   "1-hour SEO audit by our expert team",
                   "Technical SEO check (indexing, on-page issues, etc.)",
@@ -42,80 +45,91 @@ export default function PricingSection() {
                   "List of top-priority fixes",
                   "Delivered within 7 business days",
                 ].map((text, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{text}</span>
+                  <div key={i} className="flex items-start mb-[20px]">
+                    <Check
+                      enableBackground={"red"}
+                      className="w-5 h-5 text-blue-600  mt-0.5 mr-[13px] flex-shrink-0"
+                    />
+
+                    <div className="text-[#848199] text-xl font-medium leading-lg">
+                      {text}
+                    </div>
                   </div>
                 ))}
               </div>
 
               <Button
                 variant="outline"
-                className="w-full py-3 text-blue-600 border-blue-600 hover:bg-blue-50 rounded-full font-semibold bg-transparent"
+                className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
               >
                 Choose Plan
               </Button>
             </div>
 
-            {/* Pro Plan - Card Style */}
-            <div className="relative z-10 lg:-mt-[66px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl h-full transform scale-105 shadow-2xl text-white">
-              {/* Badge */}
-              <div className="pt-[88px] px-[40px]">
-                <div className="absolute top-8 right-0 transform -translate-x-1/2">
-                  <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
-                    MOST POPULAR
-                  </div>
+            <div className="relative md:mb-[102px] pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]">
+              <div className="absolute top-8 right-0 transform -translate-x-1/2">
+                <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
+                  MOST POPULAR
                 </div>
-
-                <div className="mb-8">
-                  <div className="flex items-baseline mb-2">
-                    <span className="text-4xl font-bold">$79</span>
-                    <span className="text-blue-100 ml-2">/One time</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">Pro</h3>
-                  <p className="text-blue-100">
-                    For growing sites that want deeper SEO analysis.
-                  </p>
-                </div>
-
-                <div className="space-y-4 mb-8">
-                  {[
-                    "2-hour audit reviewed by two senior SEO specialists",
-                    "Deeper technical SEO checks",
-                    "UI/UX suggestions based on user intent",
-                    "Actionable recommendations with light prioritization",
-                    "Delivered within 10 business days",
-                  ].map((text, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                      <span className="text-white">{text}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button className="w-full py-3 bg-white text-blue-600 hover:bg-gray-50 rounded-full font-semibold">
-                  Choose Plan
-                </Button>
               </div>
+              <div>
+                <div className="flex items-baseline">
+                  <span className="text-5xl font-bold text-white">$79</span>
+                  <span className="text-white ml-2 text-[22px]">/One time</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-[40px] font-bold text-white mb-3">Pro</h3>
+                <p className="text-white text-xl font-medium">
+                  For growing sites that want deeper SEO analysis.{" "}
+                </p>
+              </div>
+              <div className="space-y-4">
+                {[
+                  "2-hour audit reviewed by two senior SEO specialists",
+                  "Deeper technical SEO checks",
+                  "UI/UX suggestions based on user intent",
+                  "Actionable recommendations with light prioritization",
+                  "Delivered within 10 business days",
+                ].map((text, i) => (
+                  <div key={i} className="flex items-start mb-[20px]">
+                    <Check
+                      enableBackground={"red"}
+                      className="w-5 h-5 text-white  mt-0.5 mr-[13px] flex-shrink-0"
+                    />
+
+                    <div className="text-[white] text-xl font-medium leading-lg">
+                      {text}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Button
+                variant="outline"
+                className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
+              >
+                Choose Plan
+              </Button>
             </div>
 
             {/* Premium Plan - Plain */}
-            <div className="p-8">
-              <div className="mb-8">
-                <div className="flex items-baseline mb-2">
-                  <span className="text-4xl font-bold text-gray-900">
+            <div className="grid gap-[27px] basis-full md:basis-[30%]">
+              <div>
+                <div className="flex items-baseline">
+                  <span className="text-5xl font-bold line-through text-[#231D4F]">
                     $4999
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  Premium
+              </div>
+              <div>
+                <h3 className="text-[40px] font-bold text-[#231D4F] mb-3">
+                  Premium{" "}
                 </h3>
-                <p className="text-gray-600">
-                  A full, in-depth audit for serious businesses ready to scale.
+                <p className="text-[#848199] text-xl font-medium">
+                  A full, in-depth audit for serious businesses ready to scale.{" "}
                 </p>
               </div>
-
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4">
                 {[
                   "50+ hours of SEO and UX analysis over 3—4 weeks",
                   "Full technical SEO audit (crawling, indexing, Core Web Vitals, schema, etc.)",
@@ -123,16 +137,19 @@ export default function PricingSection() {
                   "Custom SEO growth blueprint with action plan",
                   "Priority support",
                 ].map((text, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{text}</span>
+                  <div key={i} className="flex items-start mb-[20px]">
+                    <Check className="w-5 h-5 text-blue-600 mt-0.5 mr-[13px] flex-shrink-0" />
+                    <div className="text-[#848199] text-xl font-medium leading-lg">
+                      {text}
+                    </div>
                   </div>
                 ))}
               </div>
 
               <Button
+                variant="outline"
                 disabled
-                className="w-full py-3 bg-gray-300 text-gray-500 rounded-full font-semibold cursor-not-allowed"
+                className="w-full py-1 px-20 cursor-pointer text-[#646464] text-center font-bold text-[20px] leading-none bg-[#E4E4E4] hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E4E4E4] mt-[7px] w-m-[297px] h-[50px]"
               >
                 Sold Out
               </Button>

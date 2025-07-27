@@ -21,13 +21,13 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="/services"
-              className="text-gray-700 font-satoshi text-[17px] font-medium leading-[20px] hover:text-gray-900"
+              className="text-gray-700  text-[17px] font-medium leading-[20px] hover:text-gray-900"
             >
               Services
             </a>
             <a
               href="/contact-us"
-              className="flex items-start gap-[10px] px-[21px] py-[12px] rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors"
+              className="flex items-start gap-[10px] px-[21px] py-[12px] rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors  text-gray-700"
             >
               Connect with us
             </a>
