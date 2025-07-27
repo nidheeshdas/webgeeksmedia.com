@@ -63,10 +63,10 @@ export default function Component() {
                     background: item.gradientString,
                   }}
                 >
-                  <div className="text-5xl font-bold text-[#000000] mb-4">
+                  <div className="text-5xl font-medium text-[#000000] mb-4">
                     {item.t1}.
                   </div>
-                  <h3 className="text-xl font-bold text-[#000000] mb-4">
+                  <h3 className="text-xl font-medium text-[#000000] mb-4">
                     {item.t2}
                   </h3>
                   <p className="text-[#333333] text-sm leading-relaxed">
@@ -79,9 +79,9 @@ export default function Component() {
                     content: "";
                     position: absolute;
                     inset: 0;
-                    padding: 2px;
+                    padding: 1.5px;
                     border-radius: 20px;
-                    background: linear-gradient(130deg, #e67474, #ffffff 40%);
+                    background: linear-gradient(118deg,rgba(230, 116, 116, 1) 0%, rgba(170, 63, 254, 1) 12%, rgba(170, 63, 254, 1) 22%, rgba(255, 255, 255, 0) 30%);
                     -webkit-mask: linear-gradient(#fff 0 0) content-box,
                       linear-gradient(#fff 0 0);
                     -webkit-mask-composite: xor;
