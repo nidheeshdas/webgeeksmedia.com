@@ -14,6 +14,8 @@ export function useContactForm() {
   const [errors, setErrors] = useState<FormErrors>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [success, setSuccess] = useState<string>("")
+
 
   const validateField = useCallback((field: keyof FormData, value: string) => {
     switch (field) {
@@ -58,16 +60,26 @@ export function useContactForm() {
 
   const validateForm = useCallback(() => {
     const newErrors: FormErrors = {}
-    let isValid = true
+    let isValid = true;
 
-    Object.keys(formData).forEach((key) => {
+    [
+      'name',
+      'email',
+      'subject',
+      'country',
+      'message',
+    ].forEach((key) => {
       const field = key as keyof FormData
       const validation = validateField(field, formData[field])
       if (!validation.isValid) {
-        newErrors[field] = validation.error
+        newErrors[field as keyof FormErrors] = validation.error
         isValid = false
       }
     })
+
+    if (!isValid) {
+      newErrors.submit = 'Please fill valid input in all fields.';
+    }
 
     setErrors(newErrors)
     setTouched({
@@ -76,7 +88,7 @@ export function useContactForm() {
       subject: true,
       country: true,
       message: true,
-    })
+    });
 
     return isValid
   }, [formData, validateField])
@@ -94,6 +106,34 @@ export function useContactForm() {
     setIsSubmitting(false)
   }, [])
 
+  const onSubmit = useCallback((body) => {
+    fetch("/mailer/send.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(body as any),
+    })
+      .then(async (res) => {
+        const message = await res.text();
+        if (!res.ok) {
+          throw new Error(message);
+        }
+        return message;
+      })
+      .then((message) => {
+        setSuccess(message);
+      })
+      .catch((err) => {
+        console.error(err);
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          submit: err.message || "Error sending message",
+        }));
+      });
+  }, []);
+
+
   return {
     formData,
     errors,
@@ -104,5 +144,8 @@ export function useContactForm() {
     handleFieldBlur,
     validateForm,
     resetForm,
+    onSubmit,
+    success,
+    setSuccess,
   }
 }

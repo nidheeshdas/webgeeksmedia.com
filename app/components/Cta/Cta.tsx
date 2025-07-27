@@ -2,8 +2,11 @@ import React from "react";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const Cta: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto">
@@ -28,7 +31,7 @@ const Cta: React.FC = () => {
             <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white">
               Starting with just <span style={{ color: "#ffc728" }}>$49</span>
             </p>
-            <Button variant="primary" className="mt-6 sm:mt-8">
+            <Button onClick={() => navigate('/contact-us')} variant="primary" className="mt-6 sm:mt-8">
               Start Now <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
