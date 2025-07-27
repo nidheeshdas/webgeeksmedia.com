@@ -11,7 +11,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
   };
   return (
     <img
-      src="/images/WebGeeksMediaLogo.png"
+      src="/images/webGeeksMediaLogo.png"
       alt="WebGeeks Media"
       className={`h-auto ${sizeClasses[size]} ${className}`}
       loading="eager"
