@@ -23,13 +23,13 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              to="/audit-service"
+              to="/audit-service/"
               className="text-gray-700 font-satoshi text-[17px] font-medium leading-[20px] hover:text-gray-900"
             >
               Services
             </Link>
             <Link
-              to="/contact-us"
+              to="/contact-us/"
               className="flex items-start gap-[10px] px-[21px] py-[12px] rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors"
             >
               Connect with us
@@ -60,7 +60,7 @@ export default function Header() {
                 {/* <ChevronDown className="w-4 h-4" /> */}
               </div>
               <Button
-                onClick={() => navigate("/contact-us")}
+                onClick={() => navigate("/contact-us/")}
                 className=" text-white px-6 py-2 rounded-full w-fit rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors"
               >
                 Connect with us

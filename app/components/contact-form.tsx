@@ -216,7 +216,7 @@ export default function ContactForm({
                 </div>
 
                 {/* Turnstile Widget */}
-                <Turnstile
+                <Turnstile className="w-full"
                   siteKey="0x4AAAAAABmlzHbo3c-aQEBP"
                   onSuccess={(token) => setTurnstileToken(token)}
                 />
