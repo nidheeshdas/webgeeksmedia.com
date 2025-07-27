@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const services = [
   {
     icon: () => (
@@ -14,6 +16,8 @@ const services = [
         />
       </svg>
     ),
+    link: "/audit-service/",
+
     title: "SEO Audit Services",
     description:
       "Get expert eyes on your website. Start with our $49 entry-level audit and discover what's holding back your rankings.",
@@ -34,6 +38,7 @@ const services = [
         />
       </svg>
     ),
+    link: null,
     title: "WordPress Care Plans",
     description:
       "From essential updates to elite care for eCommerce, we keep your site secure, fast, and worry-free — starting at just $49/month.",
@@ -54,6 +59,7 @@ const services = [
         />
       </svg>
     ),
+    link: null,
     title: "SEO Content Writing",
     description:
       "Scale your content the right way. Choose between high-quality human-written authority content or affordable AI-assisted bulk publishing.",
@@ -74,6 +80,7 @@ const services = [
         />
       </svg>
     ),
+    link: null,
     title: "Link Building Services",
     description:
       "Gain high-authority, niche-relevant backlinks to grow your visibility, trust, and traffic. Tailored campaigns for startups and tough niches like CBD or Forex.",
@@ -104,7 +111,7 @@ export default function Services() {
               {/* Status Badge */}
               {service.status && (
                 <div className="absolute top-6 right-6">
-                  <span className="bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1 rounded-[31.858px] border border-[#E67474] bg-[linear-gradient(135deg,_#FAF5FF_0%,_#EFF6FF_100%)]">
+                  <span className="bg-blue-50 text-blue-600 text-xs font-bold px-[20px] py-[8px] rounded-[31.858px] border border-[#E67474] bg-[linear-gradient(135deg,_#FAF5FF_0%,_#EFF6FF_100%)]">
                     {service.status}
                   </span>
                 </div>
@@ -116,9 +123,21 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[28px] font-bold text-blue-600 mb-4 leading-tight">
-                {service.title}
-              </h3>
+
+              {service.link ? (
+                <Link
+                  className="text-[28px] font-bold text-blue-600 mb-4 leading-tight"
+                  to={service.link}
+                >
+                  <h3 className="text-[28px] font-bold text-blue-600 mb-4 leading-tight">
+                    {service.title}
+                  </h3>
+                </Link>
+              ) : (
+                <h3 className="text-[28px] font-bold text-blue-600 mb-4 leading-tight">
+                  {service.title}
+                </h3>
+              )}
 
               {/* Description */}
               <p className="text-gray-600 text-base leading-relaxed">
