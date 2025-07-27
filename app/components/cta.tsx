@@ -18,7 +18,7 @@ export default function CTA(props) {
                 {props.priceText}
                 <span className="text-yellow-400">${props.price}</span>
               </h2>
-              <Button onClick={() => navigate(props.buttonNavigateTo)} className="h-[50px] m-w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full">
+              <Button onClick={() => navigate(props.buttonNavigateTo || '/contact-us')} className="h-[50px] m-w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full">
                 {props.buttonText}{" "}
                 {props.showIcon ? <ArrowRight className="w-5 h-5" /> : null}
               </Button>
