@@ -10,7 +10,7 @@ export default function WhyClients() {
               Why Clients <br />
               <span className="text-blue-600">Love Us</span>
             </h2>
-            <p className="text-[hashtag#4B5563] md:mb-[33px] lg:mb-40 text-[18px] font-medium leading-[28px]">
+            <p className="text-[hashtag#4B5563] mb-[196px] text-[18px] font-medium leading-[28px]">
               Discover why businesses trust WebGeeksMedia for innovative,
               reliable, and tailored SEO solutions. From exceptional quality to
               timely delivery and lasting partnerships, we deliver measurable
@@ -47,7 +47,6 @@ export default function WhyClients() {
                   fill="#433b69"
                   xml:space="preserve"
                   style={{ whiteSpace: "pre" }}
-                  font-family="Satoshi Variable"
                   font-size="17"
                   font-weight="500"
                   letter-spacing="0em"
@@ -159,20 +158,26 @@ export default function WhyClients() {
               <div className="flex items-center relative z-10">
                 <div className="w-[92px] h-[92px] bg-gradient-to-br from-blue-400 to-blue-600 rounded-[91.488px] border border-[#E67474] shadow-[0_9.149px_9.149px_rgba(0,0,0,0.08)] mr-4 flex items-center justify-center text-white font-bold text-lg bg-[url('/images/santhoshi.png')] bg-cover bg-center bg-no-repeat"></div>
                 <div className="">
-                  <div className="font-bold text-gray-900 text-lg">
+                  <div className="font-bold text-gray-900 text-[26px] leading-normal mb-[4px]">
                     Sanjay Bhatgaonkar
                   </div>
-                  <div className="text-sm text-gray-600 mb-2">
+                  <div className="text-[14px] font-medium text-[#6A6A6A] mb-2">
                     Founder of Ecrease
                   </div>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
                       >
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        <path
+                          d="M11.9752 2.81664C12.2318 2.02695 13.349 2.02695 13.6056 2.81664L15.2922 8.00726C15.4069 8.36043 15.736 8.59954 16.1074 8.59954H21.5651C22.3954 8.59954 22.7407 9.66206 22.0689 10.1501L17.6535 13.3581C17.3531 13.5764 17.2274 13.9633 17.3421 14.3164L19.0287 19.507C19.2853 20.2967 18.3814 20.9534 17.7097 20.4654L13.2943 17.2574C12.9938 17.0391 12.587 17.0391 12.2866 17.2574L7.87121 20.4654C7.19946 20.9534 6.29562 20.2967 6.5522 19.507L8.23874 14.3164C8.35349 13.9633 8.22778 13.5764 7.92736 13.3581L3.51196 10.1501C2.8402 9.66206 3.18544 8.59954 4.01577 8.59954H9.47352C9.84485 8.59954 10.174 8.36043 10.2887 8.00726L11.9752 2.81664Z"
+                          fill="#FFC728"
+                        />
                       </svg>
                     ))}
                   </div>

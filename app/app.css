@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Satoshi Variable", "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Satoshi", "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -53,20 +53,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-satoshi: 'Satoshi Variable', sans-serif;
+  --font-satoshi: 'Satoshi', sans-serif;
 
 }
 
 html {
   scroll-behavior: smooth;
-    font-family: var(--font-satoshi);
+  font-family: 'Satoshi', sans-serif;
 
 }
 
 html,
 body {
   @apply bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200;
-  font-family: var(--font-sans);
+  font-family: 'Satoshi', sans-serif;
   line-height: 1.6;
 
   @media (prefers-color-scheme: dark) {
