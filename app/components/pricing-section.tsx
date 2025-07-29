@@ -59,6 +59,7 @@ export default function PricingSection() {
               </div>
 
               <Button
+                onClick={() => window.location.href = "/mailer/pay.php?plan=essential"}
                 variant="outline"
                 className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
               >
@@ -105,6 +106,7 @@ export default function PricingSection() {
                 ))}
               </div>
               <Button
+                onClick={() => window.location.href = "/mailer/pay.php?plan=pro"}
                 variant="outline"
                 className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
               >

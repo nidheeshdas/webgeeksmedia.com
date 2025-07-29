@@ -64,7 +64,7 @@ try {
             ";
 
             $mail->send();
-            return header("Location: /payment-success");
+            return header("Location: https://forms.gle/hcHzZZWJ4r2GEzZG8");
 
         } catch (Exception $e) {
             return header("Location: /payment-error?message=" . urlencode($e->getMessage()));

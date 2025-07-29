@@ -74,7 +74,7 @@ export default function Home() {
         buttonText={"Start Now"}
         content="Let us earn your trust"
         priceText={"Starting With Just "}
-        buttonNavigateTo="/contact-us/"
+        buttonNavigateTo="/mailer/pay.php?plan=essential"
       />
       <Footer />
     </main>
