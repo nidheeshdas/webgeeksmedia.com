@@ -57,18 +57,19 @@ export default function PricingSection() {
                   </div>
                 ))}
               </div>
+              <div className="p-[2px] mt-[7px] h-[54px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
+                <Button
+                  onClick={() => window.location.href = "/mailer/pay.php?plan=essential"}
+                  className="w-full py-1 px-8 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] bg-white w-m-[297px] h-[50px]"
+                >
+                  Choose Plan
+                </Button>
+              </div>
 
-              <Button
-                onClick={() => window.location.href = "/mailer/pay.php?plan=essential"}
-                variant="outline"
-                className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
-              >
-                Choose Plan
-              </Button>
             </div>
 
-            <div className="relative md:mb-[102px] pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]">
-              <div className="absolute top-8 right-0 transform -translate-x-1/2">
+            <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]">
+              <div className="absolute top-8 right-6">
                 <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
                   MOST POPULAR
                 </div>
@@ -105,17 +106,18 @@ export default function PricingSection() {
                   </div>
                 ))}
               </div>
-              <Button
-                onClick={() => window.location.href = "/mailer/pay.php?plan=pro"}
-                variant="outline"
-                className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E67474] bg-white mt-[7px] w-m-[297px] h-[50px]"
-              >
-                Choose Plan
-              </Button>
+              <div className="p-[2px] mt-[7px] h-[54px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
+                <Button
+                  onClick={() => window.location.href = "/mailer/pay.php?plan=pro"}
+                  className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px]  bg-white w-m-[297px] h-[50px]"
+                >
+                  Choose Plan
+                </Button>
+              </div>
             </div>
 
             {/* Premium Plan - Plain */}
-            <div className="grid gap-[27px] basis-full md:basis-[30%]">
+            <div className="grid gap-[27px] basis-full md:basis-[30%] lg:pl-4">
               <div>
                 <div className="flex items-baseline">
                   <span className="text-5xl font-bold line-through text-[#231D4F]">

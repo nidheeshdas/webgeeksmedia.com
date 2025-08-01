@@ -84,7 +84,7 @@ export default function ContactForm({
 
   return (
     <section className="bg-[#f8f8f8]">
-      <div className="container mx-auto px-4 py-[80px]">
+      <div className="container mx-auto px-3 lg:px-4 py-[80px]">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Contact Information */}
           <div className="space-y-8">
@@ -123,7 +123,7 @@ export default function ContactForm({
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="rounded-[10px] bg-white shadow-[0_0_20px_rgba(0,0,0,0.10)] p-[50px]">
+          <div className="rounded-[10px] bg-white shadow-[0_0_20px_rgba(0,0,0,0.10)] p-[25px] lg:p-[50px]">
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col justify-center items-center gap-[20px] w-full">
                 {/* Name Field */}
