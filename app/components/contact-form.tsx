@@ -191,29 +191,36 @@ export default function ContactForm({
                 </div>
 
                 {/* Country Field */}
-                <div className="w-full">
-                  <select
-                    value={formData.country}
-                    onChange={(e) =>
-                      handleFieldChange("country", e.target.value)
-                    }
-                    onBlur={() => handleFieldBlur("country")}
-                    className={`w-full px-4 py-3 border-2 rounded-xl text-gray-900 transition-colors focus:outline-none focus:ring-0 ${
-                      errors.country && touched.country
-                        ? "border-red-300 focus:border-red-500"
-                        : "border-gray-200 focus:border-blue-500"
-                    } ${formData.country === "" ? "text-gray-500" : "text-gray-900"}`}
-                    disabled={isSubmitting}
-                  >
-                    <option value="" disabled className="text-gray-500">
-                      Select your country
-                    </option>
-                    {COUNTRIES.map((country) => (
-                      <option key={country} value={country} className="text-gray-900">
-                        {country}
+                <div className="relative w-full">
+                  <div className="relative w-full">
+                    <select
+                      value={formData.country}
+                      onChange={(e) =>
+                        handleFieldChange("country", e.target.value)
+                      }
+                      onBlur={() => handleFieldBlur("country")}
+                      className={`w-full appearance-none px-4 py-3 border-2 rounded-xl text-gray-900 transition-colors focus:outline-none focus:ring-0 ${
+                        errors.country && touched.country
+                          ? "border-red-300 focus:border-red-500"
+                          : "border-gray-200 focus:border-blue-500"
+                      } ${formData.country === "" ? "text-gray-500" : "text-gray-900"}`}
+                      disabled={isSubmitting}
+                    >
+                      <option value="" disabled className="text-gray-500">
+                        Select your country
                       </option>
-                    ))}
-                  </select>
+                      {COUNTRIES.map((country) => (
+                        <option key={country} value={country} className="text-gray-900">
+                          {country}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                      <svg className="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                  </div>
                   {errors.country && touched.country && (
                     <p className="mt-1 text-sm text-red-600">
                       {errors.country}

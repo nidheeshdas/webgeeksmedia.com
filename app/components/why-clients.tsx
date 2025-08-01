@@ -1,5 +1,28 @@
 import benefits from "./why-client-benifits";
+import { useRef, useLayoutEffect, useState, useCallback, useEffect } from "react";
+
 export default function WhyClients() {
+  const svgParent = useRef<HTMLDivElement>(null);
+  const [svgWidth, setSvgWidth] = useState(0);
+
+  const updateSvg = useCallback(() => {
+    if(svgParent.current) {
+      const rect = svgParent.current.getBoundingClientRect();
+      setSvgWidth(rect.width);
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    updateSvg();
+  }, [updateSvg]);
+
+  useEffect(() => {
+    updateSvg();
+    window.addEventListener('resize', updateSvg);
+    return () => window.removeEventListener('resize', updateSvg);
+  }, [updateSvg]);
+
+
   return (
     <section className="bg-white">
       <div className="container mx-auto px-4 py-[80px]">
@@ -17,9 +40,9 @@ export default function WhyClients() {
               results that drive success.
             </p>
 
-            <div className="lg:w-[442px] lg:h-[140px]">
+            <div ref={svgParent} className="lg:w-[442px] lg:h-[140px]">
               <svg
-                width="462"
+                width={svgWidth}
                 height="191"
                 viewBox="0 0 462 191"
                 fill="none"

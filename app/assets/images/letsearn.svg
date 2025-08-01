@@ -1,0 +1,61 @@
+<svg width="1200" height="455" viewBox="0 0 1200 455" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="455" rx="56" fill="#232038"/>
+<g opacity="0.25">
+<mask id="mask0_148_771" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="455">
+<rect width="1200" height="455" rx="56" fill="#232038"/>
+</mask>
+<g mask="url(#mask0_148_771)">
+<g opacity="0.1">
+<rect x="-7.45553" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="-7.45553" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="-7.45553" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="166.433" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="166.433" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="166.433" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="340.322" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="340.322" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="340.322" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="514.211" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="514.211" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="514.211" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="688.1" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="688.1" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="688.1" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="861.989" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="861.989" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="861.989" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="1035.88" y="-32.4558" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="1035.88" y="141.433" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+<rect x="1035.88" y="315.322" width="172.578" height="172.578" stroke="#D9D9D9" stroke-width="1.31111"/>
+</g>
+</g>
+</g>
+<circle cx="937" cy="228" r="176" fill="#E0FF22"/>
+<circle cx="937" cy="228" r="176" fill="url(#paint0_linear_148_771)"/>
+<path d="M1043.5 195.185C1042.82 193.536 1041.51 192.225 1039.86 191.54C1039.04 191.194 1038.17 191.011 1037.29 191H1003.54C1001.75 191 1000.03 191.711 998.768 192.977C997.502 194.243 996.791 195.96 996.791 197.75C996.791 199.54 997.502 201.257 998.768 202.523C1000.03 203.789 1001.75 204.5 1003.54 204.5H1021.02L983.291 242.233L961.084 219.958C960.456 219.325 959.71 218.823 958.887 218.48C958.064 218.137 957.182 217.961 956.291 217.961C955.4 217.961 954.518 218.137 953.695 218.48C952.873 218.823 952.126 219.325 951.499 219.958L910.999 260.458C910.366 261.085 909.864 261.832 909.521 262.654C909.178 263.477 909.002 264.359 909.002 265.25C909.002 266.141 909.178 267.023 909.521 267.846C909.864 268.668 910.366 269.415 910.999 270.042C911.626 270.675 912.373 271.177 913.195 271.52C914.018 271.863 914.9 272.039 915.791 272.039C916.682 272.039 917.564 271.863 918.387 271.52C919.21 271.177 919.956 270.675 920.584 270.042L956.291 234.267L978.499 256.543C979.126 257.175 979.873 257.677 980.695 258.02C981.518 258.363 982.4 258.539 983.291 258.539C984.182 258.539 985.064 258.363 985.887 258.02C986.71 257.677 987.456 257.175 988.084 256.543L1030.54 214.017V231.5C1030.54 233.29 1031.25 235.007 1032.52 236.273C1033.78 237.539 1035.5 238.25 1037.29 238.25C1039.08 238.25 1040.8 237.539 1042.06 236.273C1043.33 235.007 1044.04 233.29 1044.04 231.5V197.75C1044.03 196.868 1043.85 195.997 1043.5 195.185Z" fill="url(#paint1_linear_148_771)"/>
+<path d="M880.711 185.404C881.289 185.74 881.737 186.261 881.98 186.884C882.224 187.506 882.249 188.193 882.052 188.832L871.41 223.411H891.046C891.623 223.411 892.187 223.58 892.669 223.896C893.152 224.213 893.53 224.665 893.759 225.194C893.988 225.724 894.057 226.309 893.957 226.878C893.857 227.446 893.592 227.972 893.196 228.392L845.925 278.619C845.467 279.105 844.858 279.422 844.198 279.518C843.537 279.615 842.863 279.484 842.286 279.148C841.709 278.812 841.263 278.291 841.02 277.669C840.777 277.047 840.752 276.361 840.949 275.723L851.591 241.138H831.956C831.379 241.138 830.814 240.969 830.332 240.653C829.85 240.336 829.471 239.884 829.242 239.355C829.013 238.825 828.945 238.24 829.045 237.671C829.145 237.103 829.409 236.577 829.805 236.157L877.077 185.93C877.534 185.445 878.141 185.128 878.801 185.031C879.461 184.935 880.134 185.064 880.711 185.399V185.404Z" fill="url(#paint2_linear_148_771)"/>
+<text fill="#CCCCCC" xml:space="preserve" style="white-space: pre" font-family="Satoshi Variable" font-size="36" font-weight="500" letter-spacing="0em"><tspan x="79" y="126.41">Ready to See What&#x2019;s Really&#10;</tspan><tspan x="79" y="175.41">Holding Your Website Back?</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Satoshi" font-size="50" font-weight="bold" letter-spacing="0px"><tspan x="510.396" y="270.8">$49</tspan></text>
+<text fill="#FFC728" xml:space="preserve" style="white-space: pre" font-family="Satoshi" font-size="50" font-weight="bold" letter-spacing="0px"><tspan x="510.396" y="270.8">$49</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Satoshi" font-size="50" font-weight="bold" letter-spacing="0px"><tspan x="79" y="270.8">Starting With Just </tspan></text>
+<rect x="79" y="317.05" width="205" height="50" rx="25" fill="url(#paint3_linear_148_771)"/>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Satoshi Variable" font-size="16" font-weight="500" letter-spacing="0px"><tspan x="100" y="348.21">Get Started For $49 &#x2192;</tspan></text>
+<defs>
+<linearGradient id="paint0_linear_148_771" x1="761" y1="52" x2="1179.05" y2="169.984" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E1E4FE"/>
+<stop offset="1" stop-color="#E3FED0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_148_771" x1="921.005" y1="196.403" x2="979.519" y2="297.807" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2461E9"/>
+<stop offset="1" stop-color="#1D50DA"/>
+</linearGradient>
+<linearGradient id="paint2_linear_148_771" x1="834.778" y1="191.303" x2="909.391" y2="244.651" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2461E9"/>
+<stop offset="1" stop-color="#1D50DA"/>
+</linearGradient>
+<linearGradient id="paint3_linear_148_771" x1="97.2222" y1="320.383" x2="115.761" y2="399.433" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2461E9"/>
+<stop offset="1" stop-color="#1D50DA"/>
+</linearGradient>
+</defs>
+</svg>
