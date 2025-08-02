@@ -1,6 +1,6 @@
-export default function Component() {
+export default function Component({id}) {
   return (
-    <section className="bg-[#f8f8f8]">
+    <section className="bg-[#f8f8f8]" id={id}>
       <div className="container mx-auto px-4 py-[80px]">
         {/* Header */}
         <div className="text-center mb-16">
