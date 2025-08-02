@@ -70,6 +70,31 @@ export default function PricingSection() {
             </div>
 
             <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]  lg:-mt-[110px] lg:mb-[50px]">
+              <div className="stripeSet">
+                <div className="stripe stripe-1">
+                  <div className="stripe stripe-2">
+                    <div className="stripe stripe-3">
+                      <div className="stripe stripe-4">
+                        <div className="stripe stripe-5">
+                          <div className="stripe stripe-6">
+                            <div className="stripe stripe-7">
+                              <div className="stripe stripe-8">
+                                <div className="stripe stripe-9">
+                                  <div className="stripe stripe-10">
+                                    <div className="stripe stripe-11">
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="absolute top-6 right-6">
                 <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
                   MOST POPULAR
