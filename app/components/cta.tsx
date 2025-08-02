@@ -8,7 +8,7 @@ export default function CTA(props) {
   return (
     <section className="bg-[#f8f8f8]">
       <div className="container mx-auto px-4 py-[80px]">
-        <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-[56px] p-8 md:p-12 lg:p-16 relative overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-8 items-center relative z-10">
             <div className="flex flex-col gap-8 items-start">
               <p className="text-[#CCC] text-[28px] md:text-[36px] font-medium leading-[40px]">
@@ -18,7 +18,14 @@ export default function CTA(props) {
                 {props.priceText}
                 <span className="text-yellow-400">${props.price}</span>
               </h2>
-              <Button onClick={() => navigate(props.buttonNavigateTo || '/mailer/pay.php?plan=essential')} className="h-[50px] m-w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full cursor-pointer">
+              <Button
+                onClick={() =>
+                  navigate(
+                    props.buttonNavigateTo || "/mailer/pay.php?plan=essential"
+                  )
+                }
+                className="h-[50px] w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full cursor-pointer"
+              >
                 {props.buttonText}{" "}
                 {props.showIcon ? <ArrowRight className="w-5 h-5" /> : null}
               </Button>

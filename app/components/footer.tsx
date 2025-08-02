@@ -17,8 +17,11 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center space-x-4">
-            <a href="https://www.facebook.com/WebGeeksMedia" className="text-gray-400 hover:text-gray-600">
+          <div className="flex items-center space-x-4 mt-[8px] md:mt-0 pb-1 md:pb-0">
+            <a
+              href="https://www.facebook.com/WebGeeksMedia"
+              className="text-gray-400 hover:text-gray-600"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -34,7 +37,10 @@ export default function Footer() {
                 </g>
               </svg>
             </a>
-            <a href="https://x.com/webgeeksmedia" className="text-gray-400 hover:text-gray-600">
+            <a
+              href="https://x.com/webgeeksmedia"
+              className="text-gray-400 hover:text-gray-600"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
@@ -76,7 +82,10 @@ export default function Footer() {
                 </defs>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/company/webgeeksmedia/" className="text-gray-400 hover:text-gray-600">
+            <a
+              href="https://www.linkedin.com/company/webgeeksmedia/"
+              className="text-gray-400 hover:text-gray-600"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -100,7 +109,10 @@ export default function Footer() {
                 </g>
               </svg>
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=918698511369&text=Hello%2C%0A%0AI%27m%20interested%20in%20the%20SEO%20Audit%20service%20for%20my%20website." className="text-gray-400 hover:text-gray-600">
+            <a
+              href="https://api.whatsapp.com/send/?phone=918698511369&text=Hello%2C%0A%0AI%27m%20interested%20in%20the%20SEO%20Audit%20service%20for%20my%20website."
+              className="text-gray-400 hover:text-gray-600"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"

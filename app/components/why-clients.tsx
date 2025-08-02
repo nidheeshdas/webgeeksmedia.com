@@ -1,12 +1,18 @@
 import benefits from "./why-client-benifits";
-import { useRef, useLayoutEffect, useState, useCallback, useEffect } from "react";
+import {
+  useRef,
+  useLayoutEffect,
+  useState,
+  useCallback,
+  useEffect,
+} from "react";
 
 export default function WhyClients() {
   const svgParent = useRef<HTMLDivElement>(null);
   const [svgWidth, setSvgWidth] = useState(0);
 
   const updateSvg = useCallback(() => {
-    if(svgParent.current) {
+    if (svgParent.current) {
       const rect = svgParent.current.getBoundingClientRect();
       setSvgWidth(rect.width);
     }
@@ -18,10 +24,9 @@ export default function WhyClients() {
 
   useEffect(() => {
     updateSvg();
-    window.addEventListener('resize', updateSvg);
-    return () => window.removeEventListener('resize', updateSvg);
+    window.addEventListener("resize", updateSvg);
+    return () => window.removeEventListener("resize", updateSvg);
   }, [updateSvg]);
-
 
   return (
     <section className="bg-white">
@@ -33,14 +38,17 @@ export default function WhyClients() {
               Why Clients <br />
               <span className="text-blue-600">Love Us</span>
             </h2>
-            <p className="text-[hashtag#4B5563] mb-[196px] text-[18px] font-medium leading-[28px]">
+            <p className="text-[hashtag#4B5563] mb:[30px] md:mb-[196px] text-[18px] font-medium leading-[28px]">
               Discover why businesses trust WebGeeksMedia for innovative,
               reliable, and tailored SEO solutions. From exceptional quality to
               timely delivery and lasting partnerships, we deliver measurable
               results that drive success.
             </p>
 
-            <div ref={svgParent} className="lg:w-[442px] lg:h-[140px]">
+            <div
+              ref={svgParent}
+              className="lg:w-[442px] lg:h-[140px] mb-[30px] md:mb-0"
+            >
               <svg
                 width={svgWidth}
                 height="191"
