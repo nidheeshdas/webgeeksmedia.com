@@ -8,6 +8,15 @@ import Footer from "~/components/footer";
 import { Quote } from "lucide-react";
 import ServiceHeaderTestimonialCard from "~/components/ServiceHeaderTestimonialCard";
 
+export function meta() {
+  return [
+    { title: "Your Page Title" },
+    { name: "description", content: "Description of your page" },
+    // Add more meta tags as needed
+  ];
+}
+
+
 export default function Services() {
   return (
     <main className="min-h-screen">
