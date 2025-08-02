@@ -12,7 +12,7 @@ export default function Hero(props) {
         backgroundPosition: "0% 0%",
         backgroundRepeat: "repeat",
         // backgroundSize: "100% 100%",
-        backgroundBlendMode: "overlay",
+        backgroundBlendMode: "soft-light",
       }}
     >
       <Header />
