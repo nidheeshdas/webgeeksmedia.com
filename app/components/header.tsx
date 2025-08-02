@@ -63,12 +63,16 @@ export default function Header() {
                 </Link>
                 {/* <ChevronDown className="w-4 h-4" /> */}
               </div>
-              <Button
-                onClick={() => navigate("/contact-us/")}
-                className=" text-white px-6 py-2 rounded-full w-fit rounded-[30px] border-2 border-[#E67474] text-[#E67474] hover:bg-[#E67474]/10 transition-colors"
+              <Link
+                to="/contact-us/"
+                // className="flex items-start gap-[10px] px-[21px] py-[12px] rounded-[30px] border-2 border-[#E67474] text-gray-700 hover:bg-[#E67474]/10 transition-colors"
               >
-                Connect with us
-              </Button>
+                <div className="p-[2px] w-[160px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
+                  <button className="flex flex-row gap-[10px] text-[#333] text-center font-medium text-[16px] leading-[16px] cursor-pointer bg-[#e3fad6] rounded-[28px] px-[21px] py-[17px] transition-colors">
+                    Connect with us
+                  </button>
+                </div>
+              </Link>
             </nav>
           </div>
         )}

@@ -331,3 +331,13 @@ section {
 
 /* component based css */
 
+.bg-grid-squares::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 2.6px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 2.6px, transparent 1px);
+  background-size: 174px 174px; /* adjust square size here */
+  z-index: 0;
+}
