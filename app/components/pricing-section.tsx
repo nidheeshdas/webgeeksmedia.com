@@ -17,7 +17,7 @@ export default function PricingSection() {
           </p>
         </div>
         {/* Pricing Cards */}
-        <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[55px] px-[49px]">
+        <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[75px] px-[49px]">
           <div className="flex flex-col md:flex-row gap-15">
             {/* Essential Plan - Plain */}
             <div className="grid gap-[27px] basis-full md:basis-[30%]">
@@ -95,8 +95,8 @@ export default function PricingSection() {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-6 right-6">
-                <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
+              <div className="absolute top-6 right-[40px]">
+                <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-black most-popular">
                   MOST POPULAR
                 </div>
               </div>
