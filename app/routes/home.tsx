@@ -5,6 +5,14 @@ import CTA from "~/components/cta";
 import Footer from "~/components/footer";
 import { Link } from "react-router";
 
+export function meta() {
+  return [
+    { title: "Your Page Title" },
+    { name: "description", content: "Description of your page" },
+    // Add more meta tags as needed
+  ];
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen">
