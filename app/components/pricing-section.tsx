@@ -45,12 +45,29 @@ export default function PricingSection() {
                   "List of top-priority fixes",
                   "Delivered within 7 business days",
                 ].map((text, i) => (
-                  <div key={i} className="flex items-start mb-[20px]">
-                    <Check
-                      enableBackground={"red"}
-                      className="w-5 h-5 text-blue-600  mt-0.5 mr-[13px] flex-shrink-0"
-                    />
-
+                  <div
+                    key={i}
+                    className="flex items-start mb-[20px] gap-[13px]"
+                  >
+                    <div className="h-[27px] w-[27px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.2745 0C5.94324 0 0.00012207 5.94312 0.00012207 13.2743C0.00012207 20.6055 5.94324 26.5487 13.2745 26.5487C20.6057 26.5487 26.5488 20.6055 26.5488 13.2743C26.5403 5.94666 20.6021 0.00853403 13.2745 0Z"
+                          fill="#5243C2"
+                          fill-opacity="0.103693"
+                        />
+                        <path
+                          d="M20.9367 9.07093L13.3648 19.3464C13.1842 19.586 12.915 19.7429 12.6175 19.7821C12.32 19.8212 12.0193 19.7391 11.783 19.5543L6.37588 15.2313C5.89874 14.8495 5.82148 14.1532 6.20331 13.676C6.58515 13.1989 7.28148 13.1216 7.75862 13.5035L12.2675 17.1108L19.1557 7.7623C19.3816 7.42335 19.7755 7.23596 20.181 7.27451C20.5865 7.31307 20.938 7.57134 21.0959 7.94679C21.2539 8.32223 21.1927 8.7541 20.9367 9.07093Z"
+                          fill="#5243C2"
+                        />
+                      </svg>
+                    </div>
                     <div className="text-[#848199] text-xl font-medium leading-lg">
                       {text}
                     </div>
@@ -81,9 +98,7 @@ export default function PricingSection() {
                               <div className="stripe stripe-8">
                                 <div className="stripe stripe-9">
                                   <div className="stripe stripe-10">
-                                    <div className="stripe stripe-11">
-
-                                    </div>
+                                    <div className="stripe stripe-11"></div>
                                   </div>
                                 </div>
                               </div>
@@ -120,12 +135,29 @@ export default function PricingSection() {
                   "Actionable recommendations with light prioritization",
                   "Delivered within 10 business days",
                 ].map((text, i) => (
-                  <div key={i} className="flex items-start mb-[20px]">
-                    <Check
-                      enableBackground={"red"}
-                      className="w-5 h-5 text-white  mt-0.5 mr-[13px] flex-shrink-0"
-                    />
-
+                  <div
+                    key={i}
+                    className="flex items-start mb-[20px] gap-[13px]"
+                  >
+                    <div className="h-[27px] w-[27px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.1"
+                          d="M13.2743 0C5.94312 0 0 5.94312 0 13.2743C0 20.6055 5.94312 26.5487 13.2743 26.5487C20.6055 26.5487 26.5487 20.6055 26.5487 13.2743C26.5401 5.94666 20.602 0.00853403 13.2743 0Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M20.9367 9.07069L13.3648 19.3461C13.1842 19.5857 12.915 19.7427 12.6175 19.7818C12.32 19.8209 12.0193 19.7389 11.783 19.5541L6.37588 15.2311C5.89874 14.8493 5.82148 14.1529 6.20331 13.6758C6.58515 13.1986 7.28148 13.1214 7.75862 13.5032L12.2675 17.1105L19.1557 7.76206C19.3816 7.42311 19.7755 7.23571 20.181 7.27427C20.5865 7.31282 20.938 7.5711 21.0959 7.94654C21.2539 8.32199 21.1927 8.75386 20.9367 9.07069Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
                     <div className="text-[white] text-xl font-medium leading-lg">
                       {text}
                     </div>
@@ -169,8 +201,29 @@ export default function PricingSection() {
                   "Custom SEO growth blueprint with action plan",
                   "Priority support",
                 ].map((text, i) => (
-                  <div key={i} className="flex items-start mb-[20px]">
-                    <Check className="w-5 h-5 text-blue-600 mt-0.5 mr-[13px] flex-shrink-0" />
+                  <div
+                    key={i}
+                    className="flex items-start mb-[20px] gap-[13px]"
+                  >
+                    <div className="h-[27px] w-[27px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.2745 0C5.94324 0 0.00012207 5.94312 0.00012207 13.2743C0.00012207 20.6055 5.94324 26.5487 13.2745 26.5487C20.6057 26.5487 26.5488 20.6055 26.5488 13.2743C26.5403 5.94666 20.6021 0.00853403 13.2745 0Z"
+                          fill="#5243C2"
+                          fill-opacity="0.103693"
+                        />
+                        <path
+                          d="M20.9367 9.07093L13.3648 19.3464C13.1842 19.586 12.915 19.7429 12.6175 19.7821C12.32 19.8212 12.0193 19.7391 11.783 19.5543L6.37588 15.2313C5.89874 14.8495 5.82148 14.1532 6.20331 13.676C6.58515 13.1989 7.28148 13.1216 7.75862 13.5035L12.2675 17.1108L19.1557 7.7623C19.3816 7.42335 19.7755 7.23596 20.181 7.27451C20.5865 7.31307 20.938 7.57134 21.0959 7.94679C21.2539 8.32223 21.1927 8.7541 20.9367 9.07093Z"
+                          fill="#5243C2"
+                        />
+                      </svg>
+                    </div>
                     <div className="text-[#848199] text-xl font-medium leading-lg">
                       {text}
                     </div>
