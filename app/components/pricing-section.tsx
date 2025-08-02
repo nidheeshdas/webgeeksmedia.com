@@ -17,8 +17,8 @@ export default function PricingSection() {
           </p>
         </div>
         {/* Pricing Cards */}
-        <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[75px] px-[49px]">
-          <div className="flex flex-col md:flex-row gap-15">
+        <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[75px] px-4 md:px-[49px]">
+          <div className="flex flex-col lg:flex-row gap-25 md:gap-15">
             {/* Essential Plan - Plain */}
             <div className="grid gap-[27px] basis-full md:basis-[30%]">
               <div>
@@ -86,8 +86,8 @@ export default function PricingSection() {
               </div>
             </div>
 
-            <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]  lg:-mt-[110px] lg:mb-[50px]">
-              <div className="stripeSet">
+            <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[18px] md:px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]  lg:-mt-[110px] lg:mb-[50px]">
+              <div className="stripeSet hidden lg:block">
                 <div className="stripe stripe-1">
                   <div className="stripe stripe-2">
                     <div className="stripe stripe-3">
@@ -110,7 +110,7 @@ export default function PricingSection() {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-6 right-[40px]">
+              <div className="absolute top-6 right-[85px] md:right-[40px]">
                 <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-black most-popular">
                   MOST POPULAR
                 </div>
