@@ -16,7 +16,6 @@ export function meta() {
   ];
 }
 
-
 export default function Services() {
   return (
     <main className="min-h-screen">
@@ -32,31 +31,28 @@ export default function Services() {
         </div>
       </Hero>
       <div className="relative flex justify-center items-center">
-        <div className="absolute"><a href="#why-us">
-          <svg width="70" height="84" viewBox="0 0 70 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_82_476)">
-          <rect x="15" y="11" width="40" height="54" rx="20" fill="white" shape-rendering="crispEdges"/>
-          <rect x="15.5" y="11.5" width="39" height="53" rx="19.5" stroke="url(#paint0_linear_82_476)" shape-rendering="crispEdges"/>
-          <path d="M29 40L35 46L41 40" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <defs>
-          <filter id="filter0_d_82_476" x="0" y="0" width="70" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="7.5"/>
-          <feComposite in2="hardAlpha" operator="out"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_82_476"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_82_476" result="shape"/>
-          </filter>
-          <linearGradient id="paint0_linear_82_476" x1="15" y1="38" x2="55" y2="38" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#E67474"/>
-          <stop offset="1" stop-color="#AA3FFE"/>
-          </linearGradient>
-          </defs>
-          </svg>
-        </a></div>
+        <div className="absolute">
+          <a href="#why-us">
+            <div className="p-[1px] h-[54px] w-[40px] rounded-[30px] flex justify-center items-center bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
+              <div className="bg-white h-full w-full rounded-[30px] flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M4 12L10 18L16 12"
+                    stroke="#333333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
       <WhyChooseUs id="why-us" />
       <SeoWorkflow />
