@@ -8,7 +8,7 @@ export default function PricingSection() {
       <div className="container mx-auto px-4 py-[80px] ">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="lg:text-[40px]  md:text-3xl font-medium text-gray-900 mb-4">
+          <h1 className="text-[40px] font-medium text-gray-900 mb-4">
             Simple Plans, Transparent Pricing
           </h1>
           <p className="text-gray-600 text-xl  mx-auto">
@@ -18,7 +18,7 @@ export default function PricingSection() {
         </div>
         {/* Pricing Cards */}
         <section className="mx-auto md:w-m-[1200px] md:h-max-[765px] bg-white mt-32 rounded-[34px] py-[55px] px-[49px]">
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-15">
             {/* Essential Plan - Plain */}
             <div className="grid gap-[27px] basis-full md:basis-[30%]">
               <div>
@@ -58,18 +58,19 @@ export default function PricingSection() {
                 ))}
               </div>
               <div className="p-[2px] mt-[7px] h-[54px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
-                <Button
-                  onClick={() => window.location.href = "/mailer/pay.php?plan=essential"}
+                <button
+                  onClick={() =>
+                    (window.location.href = "/mailer/pay.php?plan=essential")
+                  }
                   className="w-full py-1 px-8 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px] bg-white w-m-[297px] h-[50px]"
                 >
                   Choose Plan
-                </Button>
+                </button>{" "}
               </div>
-
             </div>
 
-            <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]">
-              <div className="absolute top-8 right-6">
+            <div className="relative md:mb-[102px] my-8 lg:my-0 pt-[88px] px-[40px] pb-[42px] grid gap-[27px] bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl transform scale-105 shadow-2xl basis-full md:basis-[40%] md:-mt-[102px]  lg:-mt-[110px] lg:mb-[50px]">
+              <div className="absolute top-6 right-6">
                 <div className="bg-[#003CC3] text-[#FFC728] px-[20px] py-[6px] rounded-[20px] text-sm font-semibold">
                   MOST POPULAR
                 </div>
@@ -106,13 +107,15 @@ export default function PricingSection() {
                   </div>
                 ))}
               </div>
-              <div className="p-[2px] mt-[7px] h-[54px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
-                <Button
-                  onClick={() => window.location.href = "/mailer/pay.php?plan=pro"}
+              <div className="p-[2px] mt-[7px] h-[54px] rounded-[30px]  shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
+                <button
+                  onClick={() =>
+                    (window.location.href = "/mailer/pay.php?plan=pro")
+                  }
                   className="w-full py-1 px-20 cursor-pointer text-[#0037B1] text-center font-bold text-[20px] leading-none  hover:bg-blue-50 rounded-[31.858px]  bg-white w-m-[297px] h-[50px]"
                 >
                   Choose Plan
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -152,10 +155,10 @@ export default function PricingSection() {
 
               <Button
                 variant="outline"
-                disabled
+                disabled={true}
                 className="w-full py-1 px-20 cursor-pointer text-[#646464] text-center font-bold text-[20px] leading-none bg-[#E4E4E4] hover:bg-blue-50 rounded-[31.858px] border-2 border-[#E4E4E4] mt-[7px] w-m-[297px] h-[50px]"
               >
-                Sold Out
+                <span className="text-[20px] font-bold">Sold Out</span>
               </Button>
             </div>
           </div>
