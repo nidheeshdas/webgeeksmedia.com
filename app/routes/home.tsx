@@ -4,6 +4,7 @@ import WhyClients from "~/components/why-clients";
 import CTA from "~/components/cta";
 import Footer from "~/components/footer";
 import { Link } from "react-router";
+import { JsonLd } from "~/components/jsonld";
 
 export function meta() {
   return [
@@ -17,6 +18,11 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* <Header /> */}
+      <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "http://webgeeksmedia.com/",
+      }} />
       <Hero>
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">
