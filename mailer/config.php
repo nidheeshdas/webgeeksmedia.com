@@ -3,8 +3,8 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
-use PayPalCheckoutSdk\Core\SandboxEnvironment as Environment;
-// For production, use PayPalCheckoutSdk\Core\ProductionEnvironment as Environment
+// use PayPalCheckoutSdk\Core\SandboxEnvironment as Environment; // For Sandbox
+use PayPalCheckoutSdk\Core\ProductionEnvironment as Environment; // For production
 
 class PayPalClient {
     public static function client(): PayPalHttpClient {
