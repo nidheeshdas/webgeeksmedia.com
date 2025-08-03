@@ -88,8 +88,8 @@ export default function ContactForm({
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Contact Information */}
           <div className="space-y-8">
-            <div className="mb-[30px">
-              <h1 className="text-[40px] font-semibold text-[#333333] mb-5">
+            <div className="mb-[30px]">
+              <h1 className="text-[40px] font-semibold text-[#333333] mb-5 text-balance">
                 Get in touch with us
               </h1>
               <p className="text-gray-600 text-xl leading-[26px]">
@@ -217,7 +217,7 @@ export default function ContactForm({
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                       <svg className="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
                       </svg>
                     </div>
                   </div>
@@ -253,10 +253,14 @@ export default function ContactForm({
                 </div>
 
                 {/* Turnstile Widget */}
-                <Turnstile className="w-full"
-                  siteKey="0x4AAAAAABmlzHbo3c-aQEBP"
-                  onSuccess={(token) => setTurnstileToken(token)}
-                />
+                <div className="w-full overflow-hidden max-w-[250px]">
+                 <div className="scale-[0.8] sm:scale-[0.85] md:scale-100 origin-top-left">
+                    <Turnstile className=""
+                      siteKey="0x4AAAAAABmlzHbo3c-aQEBP"
+                      onSuccess={(token) => setTurnstileToken(token)}
+                    />
+                 </div>
+                </div>
 
                 {/* Submit Button */}
                 <button

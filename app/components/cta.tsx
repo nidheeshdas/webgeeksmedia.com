@@ -20,9 +20,7 @@ export default function CTA(props) {
               </h2>
               <button
                 onClick={() =>
-                  navigate(
-                    props.buttonNavigateTo || "/mailer/pay.php?plan=essential"
-                  )
+                  window.location.href = "/mailer/pay.php?plan=essential"
                 }
                 className="h-[50px] w-[165px] bg-blue-600 hover:bg-blue-700 text-white px-[20px] py-[10px] rounded-full cursor-pointer ext-base font-medium not-italic leading-normal"
               >
