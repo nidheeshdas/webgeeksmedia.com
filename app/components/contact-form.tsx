@@ -253,8 +253,8 @@ export default function ContactForm({
                 </div>
 
                 {/* Turnstile Widget */}
-                <div className="w-full overflow-hidden max-w-[250px]">
-                 <div className="scale-[0.8] sm:scale-[0.85] md:scale-100 origin-top-left">
+                <div className="w-full overflow-hidden">
+                 <div className="scale-[0.8] sm:scale-[0.85] md:scale-100 origin-top-left max-w-[250px] md:max-w-[300px]">
                     <Turnstile className=""
                       siteKey="0x4AAAAAABmlzHbo3c-aQEBP"
                       onSuccess={(token) => setTurnstileToken(token)}
