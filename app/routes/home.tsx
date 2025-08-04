@@ -8,9 +8,17 @@ import { JsonLd } from "~/components/jsonld";
 
 export function meta() {
   return [
-    { title: "Your Page Title" },
-    { name: "description", content: "Description of your page" },
-    // Add more meta tags as needed
+    { title: "WebGeeksMedia • Professional SEO Services" },
+    {
+      name: "description",
+      content:
+        "Boost your website's visibility with WebGeeksMedia. Expert SEO audits, and strategies to grow your business online.",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://webgeeksmedia.com/",
+    },
   ];
 }
 
@@ -18,11 +26,55 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* <Header /> */}
-      <JsonLd data={{
+      <JsonLd
+        data={{
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "http://webgeeksmedia.com/",
-      }} />
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://webgeeksmedia.com/#organization",
+              "name": "WebGeeksMedia",
+              "url": "https://webgeeksmedia.com/",
+              "logo": "https://webgeeksmedia.com/YOUR_LOGO_URL.png",
+              "image": "https://webgeeksmedia.com/YOUR_SITE_ICON_URL.png",
+              "description": "WebGeeksMedia provides expert SEO services including website audits, and digital growth strategies.",
+              "sameAs": [
+                "https://www.facebook.com/WebGeeksMedia",
+                "https://x.com/webgeeksmedia",
+                "https://www.linkedin.com/company/webgeeksmedia/"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://webgeeksmedia.com/#website",
+              "url": "https://webgeeksmedia.com/",
+              "name": "WebGeeksMedia",
+              "description": "Professional SEO services to increase website visibility and traffic.",
+              "publisher": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://webgeeksmedia.com/#webpage",
+              "url": "https://webgeeksmedia.com/",
+              "name": "WebGeeksMedia | Professional SEO Services",
+              "description": "Boost your website's visibility with WebGeeksMedia. Expert SEO audits and digital marketing strategies for business growth.",
+              "isPartOf": {
+                "@id": "https://webgeeksmedia.com/#website"
+              },
+              "about": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://webgeeksmedia.com/YOUR_LOGO_URL.png"
+              },
+              "inLanguage": "en"
+            }
+          ]
+        }}
+      />
       <Hero>
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">

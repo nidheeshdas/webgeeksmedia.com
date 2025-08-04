@@ -3,19 +3,65 @@ import Hero from "~/components/hero";
 import Contact from "~/components/contact-form";
 import CTA from "~/components/cta";
 import Footer from "~/components/footer";
+import { JsonLd } from "~/components/jsonld";
 
 export function meta() {
   return [
-    { title: "Your Page Title" },
-    { name: "description", content: "Description of your page" },
-    // Add more meta tags as needed
+    { title: "Contact WebGeeksMedia • Get in Touch for SEO Services" },
+    { name: "description", content: "Contact WebGeeksMedia today for expert SEO services like website audits, and optimization solutions. Let’s discuss how we can grow your business online." },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://webgeeksmedia.com/contact-us/",
+    },
   ];
 }
-
 
 export default function ContactUs() {
   return (
     <main className="min-h-screen">
+      {/* Structured Data for SEO */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://webgeeksmedia.com/#organization",
+              "name": "WebGeeksMedia",
+              "url": "https://webgeeksmedia.com/",
+              "logo": "",
+              "image": "",
+              "description":
+                "WebGeeksMedia provides expert SEO services including website audits and digital growth strategies.",
+              "sameAs": [
+                "https://www.facebook.com/WebGeeksMedia",
+                "https://x.com/webgeeksmedia",
+                "https://www.linkedin.com/company/webgeeksmedia/"
+              ]
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://webgeeksmedia.com/contact-us/#webpage",
+              "url": "https://webgeeksmedia.com/contact-us/",
+              "name": "Contact WebGeeksMedia • Get in Touch for SEO Services",
+              "description":
+                "Contact WebGeeksMedia today for expert SEO services like website audits, and optimization solutions. Let’s discuss how we can grow your business online.",
+              "isPartOf": {
+                "@id": "https://webgeeksmedia.com/#website"
+              },
+              "about": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": ""
+              },
+              "inLanguage": "en"
+            }
+          ]
+        }}
+      />
       {/* <Header /> */}
       <Hero>
         <div>
