@@ -64,7 +64,7 @@ export default function Services() {
               },
               "primaryImageOfPage": {
                 "@type": "ImageObject",
-                "url": ""
+                "url": "https://webgeeksmedia.com/images/site-icon.png"
               },
               "inLanguage": "en"
             },

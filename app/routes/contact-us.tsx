@@ -30,8 +30,8 @@ export default function ContactUs() {
               "@id": "https://webgeeksmedia.com/#organization",
               "name": "WebGeeksMedia",
               "url": "https://webgeeksmedia.com/",
-              "logo": "",
-              "image": "",
+              "logo": "https://webgeeksmedia.com/images/webgeeksmedia-logo.svg",
+              "image": "https://webgeeksmedia.com/images/site-icon.png",
               "description":
                 "WebGeeksMedia provides expert SEO services including website audits and digital growth strategies.",
               "sameAs": [
@@ -55,7 +55,7 @@ export default function ContactUs() {
               },
               "primaryImageOfPage": {
                 "@type": "ImageObject",
-                "url": ""
+                "url": "https://webgeeksmedia.com/images/site-icon.png"
               },
               "inLanguage": "en"
             }

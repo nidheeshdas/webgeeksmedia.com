@@ -35,8 +35,8 @@ export default function Home() {
               "@id": "https://webgeeksmedia.com/#organization",
               "name": "WebGeeksMedia",
               "url": "https://webgeeksmedia.com/",
-              "logo": "https://webgeeksmedia.com/YOUR_LOGO_URL.png",
-              "image": "https://webgeeksmedia.com/YOUR_SITE_ICON_URL.png",
+              "logo": "https://webgeeksmedia.com/images/webgeeksmedia-logo.svg",
+              "image": "https://webgeeksmedia.com/images/site-icon.png",
               "description": "WebGeeksMedia provides expert SEO services including website audits, and digital growth strategies.",
               "sameAs": [
                 "https://www.facebook.com/WebGeeksMedia",
@@ -68,7 +68,7 @@ export default function Home() {
               },
               "primaryImageOfPage": {
                 "@type": "ImageObject",
-                "url": "https://webgeeksmedia.com/YOUR_LOGO_URL.png"
+                "url": "https://webgeeksmedia.com/images/site-icon.png"
               },
               "inLanguage": "en"
             }
