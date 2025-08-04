@@ -24,6 +24,29 @@ export function meta() {
       rel: "canonical",
       href: "https://webgeeksmedia.com/audit-service/",
     },
+    // ✅ Add favicon & app icons
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-192x192.png",
+      sizes: "192x192",
+    },
+    {
+      tagName: "link",
+      rel: "apple-touch-icon",
+      href: "https://webgeeksmedia.com/images/site-icon-180x180.png",
+    },
+    {
+      tagName: "meta",
+      name: "msapplication-TileImage",
+      content: "https://webgeeksmedia.com/images/site-icon-270x270.png",
+    },
   ];
 }
 
