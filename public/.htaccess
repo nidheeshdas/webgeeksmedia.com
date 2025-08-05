@@ -1,4 +1,6 @@
-# Redirect www to non-www and force HTTPS
+# =========================================
+# 1. Redirect www to non-www and force HTTPS
+# =========================================
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
@@ -11,40 +13,46 @@
     RewriteRule ^ https://webgeeksmedia.com%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# Default Index
+# =========================================
+# 2. Default Index
+# =========================================
 DirectoryIndex index.html index.php
 
-# Security Headers
+# =========================================
+# 3. Security Headers
+# =========================================
 <IfModule mod_headers.c>
-	Header set X-XSS-Protection "1; mode=block"
-	Header set X-Frame-Options "SAMEORIGIN"
-	Header set X-Content-Type-Options "nosniff"
-	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
-# Header set Content-Security-Policy ...
-	Header set Referrer-Policy "same-origin"
-	Header set Content-Security-Policy "frame-ancestors 'self';"
-	Header always set Permissions-Policy "geolocation=(),  midi=(), notifications=(), push=(), sync-xhr=(), accelerometer=(),  gyroscope=(),  magnetometer=(),  payment=(),  camera=(),  microphone=(), usb=(),  xr=(), speaker=(self), vibrate=(), fullscreen=(self)"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+    Header set Referrer-Policy "same-origin"
+    Header set Content-Security-Policy "frame-ancestors 'self';"
+    Header always set Permissions-Policy "geolocation=(), midi=(), notifications=(), push=(), sync-xhr=(), accelerometer=(), gyroscope=(), magnetometer=(), payment=(), camera=(), microphone=(), usb=(), xr=(), speaker=(self), vibrate=(), fullscreen=(self)"
 </IfModule>
 
-# BEGIN Security
-# Prevent directory listing for security
+# =========================================
+# 4. Security: Block directory listing & protect .htaccess
+# =========================================
 Options -Indexes
-
-# Protect .htaccess file
-<files .htaccess>
+<Files .htaccess>
     Require all denied
-</files>
-# END Security
+</Files>
 
-# Disable the server signature
+# Disable server signature
 ServerSignature Off
 
-## Performance and Caching
+# =========================================
+# 5. Performance and Caching
+# =========================================
 
-# Enable ETags
-FileETag MTime Size
+# Disable ETag for better CDN caching
+FileETag None
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
 
-# Leverage browser caching
+# Browser caching
 <IfModule mod_expires.c>
     ExpiresActive On
 
@@ -61,33 +69,42 @@ FileETag MTime Size
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType font/woff2 "access plus 1 year"
 
-    # CSS and JS: cache for 1 month
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
+    # CSS and JS: cache for 1 year (immutable for hashed files)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
 
     # HTML: short caching (1 hour)
     ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# Gzip compression for text-based assets
+# Cache-Control for immutable JS & CSS
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# =========================================
+# 6. Compression
+# =========================================
+
+# Gzip compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml
 </IfModule>
 
-# Remove ETag headers for directories
-<IfModule mod_headers.c>
-    Header unset ETag
+# Serve pre-compressed files if available
+<IfModule mod_mime.c>
+    AddEncoding gzip .gz
+    AddEncoding br .br
 </IfModule>
-FileETag None
 
-# SPA Fallback - redirect all non-matching requests to __spa-fallback.html
+# =========================================
+# 7. SPA Fallback - redirect all non-matching requests
+# =========================================
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    # Handle existing files and directories
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-
-    # Fallback to SPA entry point
     RewriteRule . __spa-fallback.html [L]
 </IfModule>
