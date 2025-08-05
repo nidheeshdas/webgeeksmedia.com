@@ -26,6 +26,8 @@ export default function Footer() {
               href="https://www.facebook.com/WebGeeksMedia"
               className="group"
               aria-label="Facebook Link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +49,8 @@ export default function Footer() {
               href="https://x.com/webgeeksmedia"
               className="group"
               aria-label="X Link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +97,8 @@ export default function Footer() {
               href="https://www.linkedin.com/company/webgeeksmedia/"
               className="group"
               aria-label="LinkedIn Link"
+              target="_blank"
+              rel="noopener noreferrer"            
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,6 +128,8 @@ export default function Footer() {
               href="https://api.whatsapp.com/send/?phone=918698511369&text=Hello%2C%0A%0AI%27m%20interested%20in%20the%20SEO%20Audit%20service%20for%20my%20website."
               className="group"
               aria-label="WhatsApp Link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
