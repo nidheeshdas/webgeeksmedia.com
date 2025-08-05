@@ -50,7 +50,7 @@ export default function WhyClients() {
               className="lg:w-[442px] lg:h-[140px] mb-[30px] md:mb-0"
             >
               <svg
-                width={svgWidth}
+                width={svgWidth || 442}
                 height="191"
                 viewBox="0 0 462 191"
                 fill="none"
