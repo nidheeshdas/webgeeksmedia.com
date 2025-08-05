@@ -42,6 +42,12 @@ export function meta() {
       name: "msapplication-TileImage",
       content: "https://webgeeksmedia.com/images/site-icon-270x270.png",
     },
+    // ✅ Add Google Site Verification
+    {
+      tagName: "meta",
+      name: "google-site-verification",
+      content: "KS5DAoUVO2WNTnP5VrL5-dJqgpAWizxysDc479SkogE",
+    },
   ];
 }
 
