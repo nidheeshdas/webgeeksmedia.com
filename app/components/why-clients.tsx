@@ -12,6 +12,7 @@ export default function WhyClients() {
   const [svgWidth, setSvgWidth] = useState(0);
 
   const updateSvg = useCallback(() => {
+    // console.log("In updateSvg;", svgParent.current);
     if (svgParent.current) {
       const rect = svgParent.current.getBoundingClientRect();
       setSvgWidth(rect.width);
@@ -19,11 +20,13 @@ export default function WhyClients() {
   }, []);
 
   useLayoutEffect(() => {
+    // console.log("In useLayoutEffect;");
     updateSvg();
   }, [updateSvg]);
 
   useEffect(() => {
-    updateSvg();
+    // console.log("In useEffect;");
+    setTimeout(updateSvg, 400)
     window.addEventListener("resize", updateSvg);
     return () => window.removeEventListener("resize", updateSvg);
   }, [updateSvg]);
@@ -50,7 +53,7 @@ export default function WhyClients() {
               className="lg:w-[442px] lg:h-[140px] mb-[30px] md:mb-0"
             >
               <svg
-                width={svgWidth || 442}
+                width={svgWidth}
                 height="191"
                 viewBox="0 0 462 191"
                 fill="none"
@@ -76,7 +79,7 @@ export default function WhyClients() {
                 </g>
                 <text
                   fill="#433b69"
-                  xml:space="preserve"
+                  xmlSpace="preserve"
                   style={{ whiteSpace: "pre" }}
                   font-size="17"
                   font-weight="500"

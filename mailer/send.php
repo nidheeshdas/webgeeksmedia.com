@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Recipients
         $mail->setFrom('richardmorse441@gmail.com', 'Contact Form');
-        $mail->addAddress('richardmorse441@gmail.com');  // Where to send the email
+        $mail->addAddress('joseph@webgeeksmedia.com');  // Where to send the email
         $mail->addReplyTo($email, $name);
 
         // Content

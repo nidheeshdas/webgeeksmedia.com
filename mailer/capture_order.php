@@ -31,7 +31,7 @@ try {
                         ->amount
                         ->value;                         // should be 49.00
 
-    if ($status === 'COMPLETED' && $amount === '49.00') {
+    if ($status === 'COMPLETED') {
         // echo "<h1>Payment Successful!</h1>";
         // echo "<p>Order ID: {$response->result->id}</p>";
         // echo "<p>Capture ID: {$response->result->purchase_units[0]->payments->captures[0]->id}</p>";
@@ -59,7 +59,7 @@ try {
             $mail->isHTML(true);
             $mail->Subject = 'WGM Services Payment: Captured';
             $mail->Body    = "
-                <h3>New Payment</h3>
+                <h3>New Payment: USD $amount</h3>
                 <pre>" . json_encode($response->result, JSON_PRETTY_PRINT) . "</pre>
             ";
 
