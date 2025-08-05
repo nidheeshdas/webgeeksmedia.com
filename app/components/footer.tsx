@@ -2,18 +2,22 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import Logo from "~/components/logo";
 
 export default function Footer() {
+   const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-white py-[18px] border-t border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Logo */}
           <div className="flex items-center mb-4 md:mb-0">
-            <Logo size="sm" />
+            <a href="https://webgeeksmedia.com/" aria-label="WebGeeksMedia Homepage">
+              <Logo size="sm" />
+            </a>
           </div>
 
           {/* Copyright */}
-          <div className="text-[#0D0D0D] text-center text-[18px] font-medium leading-none">
-            © 2025 WebGeeksMedia. All rights reserved.
+          <div className="text-[#0D0D0D] text-center text-[16px] font-medium leading-none">
+            © {currentYear} WebGeeksMedia. All rights reserved.
           </div>
 
           {/* Social Links */}
