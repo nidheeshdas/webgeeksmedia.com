@@ -1,6 +1,20 @@
+# Redirect www to non-www and force HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.webgeeksmedia\.com [NC]
+    RewriteRule ^ https://webgeeksmedia.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Default Index
 DirectoryIndex index.html index.php
 
-################# Security Headers #######################
+# Security Headers
 <IfModule mod_headers.c>
 	Header set X-XSS-Protection "1; mode=block"
 	Header set X-Frame-Options "SAMEORIGIN"
@@ -24,6 +38,47 @@ Options -Indexes
 
 # Disable the server signature
 ServerSignature Off
+
+## Performance and Caching
+
+# Enable ETags
+FileETag MTime Size
+
+# Leverage browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images: cache for 1 year
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+
+    # Fonts: cache for 1 year
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+
+    # CSS and JS: cache for 1 month
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # HTML: short caching (1 hour)
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Gzip compression for text-based assets
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml
+</IfModule>
+
+# Remove ETag headers for directories
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
 
 # SPA Fallback - redirect all non-matching requests to __spa-fallback.html
 <IfModule mod_rewrite.c>
