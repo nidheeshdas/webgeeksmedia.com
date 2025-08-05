@@ -24,10 +24,11 @@ jobs:
       run: npm run build
 
     - name: Upload via FTP
-      uses: genietim/ftp-action@releases/v4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        host: ${{ secrets.FTP_HOST }}
-        user: ${{ secrets.FTP_USER }}
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
-        localDir: build/client/
-        remoteDir: ./
+        local-dir: build/client/
+        exclude: |
+          **/mailer/*
