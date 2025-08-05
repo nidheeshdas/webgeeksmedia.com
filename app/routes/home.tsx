@@ -8,9 +8,40 @@ import { JsonLd } from "~/components/jsonld";
 
 export function meta() {
   return [
-    { title: "Your Page Title" },
-    { name: "description", content: "Description of your page" },
-    // Add more meta tags as needed
+    { title: "WebGeeksMedia • Professional SEO Services" },
+    {
+      name: "description",
+      content:
+        "Boost your website's visibility with WebGeeksMedia. Expert SEO audits, and strategies to grow your business online.",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://webgeeksmedia.com/",
+    },
+    // ✅ Add favicon & app icons
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-192x192.png",
+      sizes: "192x192",
+    },
+    {
+      tagName: "link",
+      rel: "apple-touch-icon",
+      href: "https://webgeeksmedia.com/images/site-icon-180x180.png",
+    },
+    {
+      tagName: "meta",
+      name: "msapplication-TileImage",
+      content: "https://webgeeksmedia.com/images/site-icon-270x270.png",
+    },
   ];
 }
 
@@ -18,11 +49,55 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* <Header /> */}
-      <JsonLd data={{
+      <JsonLd
+        data={{
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "http://webgeeksmedia.com/",
-      }} />
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://webgeeksmedia.com/#organization",
+              "name": "WebGeeksMedia",
+              "url": "https://webgeeksmedia.com/",
+              "logo": "https://webgeeksmedia.com/images/webgeeksmedia-logo.svg",
+              "image": "https://webgeeksmedia.com/images/site-icon.png",
+              "description": "WebGeeksMedia provides expert SEO services including website audits, and digital growth strategies.",
+              "sameAs": [
+                "https://www.facebook.com/WebGeeksMedia",
+                "https://x.com/webgeeksmedia",
+                "https://www.linkedin.com/company/webgeeksmedia/"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://webgeeksmedia.com/#website",
+              "url": "https://webgeeksmedia.com/",
+              "name": "WebGeeksMedia",
+              "description": "Professional SEO services to increase website visibility and traffic.",
+              "publisher": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://webgeeksmedia.com/#webpage",
+              "url": "https://webgeeksmedia.com/",
+              "name": "WebGeeksMedia | Professional SEO Services",
+              "description": "Boost your website's visibility with WebGeeksMedia. Expert SEO audits and digital marketing strategies for business growth.",
+              "isPartOf": {
+                "@id": "https://webgeeksmedia.com/#website"
+              },
+              "about": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://webgeeksmedia.com/images/site-icon.png"
+              },
+              "inLanguage": "en"
+            }
+          ]
+        }}
+      />
       <Hero>
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">

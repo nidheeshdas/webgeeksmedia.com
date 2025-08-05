@@ -7,18 +7,109 @@ import CTA from "~/components/cta";
 import Footer from "~/components/footer";
 import { Quote } from "lucide-react";
 import ServiceHeaderTestimonialCard from "~/components/ServiceHeaderTestimonialCard";
+import { JsonLd } from "~/components/jsonld";
 
 export function meta() {
   return [
-    { title: "Your Page Title" },
-    { name: "description", content: "Description of your page" },
-    // Add more meta tags as needed
+    {
+      title: "SEO Audit Service – Fix Issues & Boost Traffic • WebGeeksMedia",
+    },
+    {
+      name: "description",
+      content:
+        "Get a professional SEO audit from WebGeeksMedia. Receive detailed insights to improve your website’s SEO and boost search visibility.",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://webgeeksmedia.com/audit-service/",
+    },
+    // ✅ Add favicon & app icons
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "https://webgeeksmedia.com/images/site-icon-192x192.png",
+      sizes: "192x192",
+    },
+    {
+      tagName: "link",
+      rel: "apple-touch-icon",
+      href: "https://webgeeksmedia.com/images/site-icon-180x180.png",
+    },
+    {
+      tagName: "meta",
+      name: "msapplication-TileImage",
+      content: "https://webgeeksmedia.com/images/site-icon-270x270.png",
+    },
   ];
 }
 
 export default function Services() {
   return (
     <main className="min-h-screen">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://webgeeksmedia.com/#organization",
+              "name": "WebGeeksMedia",
+              "url": "https://webgeeksmedia.com/",
+              "logo": "",
+              "image": "",
+              "description":
+                "WebGeeksMedia provides professional SEO audit services with in-depth website analysis and actionable recommendations.",
+              "sameAs": [
+                "https://www.facebook.com/WebGeeksMedia",
+                "https://x.com/webgeeksmedia",
+                "https://www.linkedin.com/company/webgeeksmedia/"
+              ]
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://webgeeksmedia.com/audit-service/#webpage",
+              "url": "https://webgeeksmedia.com/audit-service/",
+              "name": "SEO Audit Service – Fix Issues & Boost Traffic • WebGeeksMedia",
+              "description":
+                "Professional SEO audit service providing a complete website analysis with actionable insights to improve search visibility.",
+              "isPartOf": {
+                "@id": "https://webgeeksmedia.com/#website"
+              },
+              "about": {
+                "@id": "https://webgeeksmedia.com/#organization"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://webgeeksmedia.com/images/site-icon.png"
+              },
+              "inLanguage": "en"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://webgeeksmedia.com/audit-service/#service",
+              "serviceType": "SEO Audit",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://webgeeksmedia.com/#organization"
+              },
+              "description":
+                "WebGeeksMedia provides a professional SEO audit that identifies website SEO issues and offers actionable recommendations for improvement.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Global"
+              }
+            }
+          ]
+        }}
+      />
+
       <Hero>
         <div>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto font-medium">
