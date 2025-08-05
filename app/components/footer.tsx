@@ -21,6 +21,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/WebGeeksMedia"
               className="text-gray-400 hover:text-gray-600"
+              aria-label="Facebook Link"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +41,7 @@ export default function Footer() {
             <a
               href="https://x.com/webgeeksmedia"
               className="text-gray-400 hover:text-gray-600"
+              aria-label="X Link"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +87,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/company/webgeeksmedia/"
               className="text-gray-400 hover:text-gray-600"
+              aria-label="LinkedIn Link"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,6 +115,7 @@ export default function Footer() {
             <a
               href="https://api.whatsapp.com/send/?phone=918698511369&text=Hello%2C%0A%0AI%27m%20interested%20in%20the%20SEO%20Audit%20service%20for%20my%20website."
               className="text-gray-400 hover:text-gray-600"
+              aria-label="WhatsApp Link"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

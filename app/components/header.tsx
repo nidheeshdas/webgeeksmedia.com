@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/">
+            <Link to="/" aria-label="WebGeeks Media">
               <Logo size="md" />
             </Link>
           </div>
@@ -24,9 +24,10 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/audit-service/"
-              className="text-gray-700 font-satoshi text-[17px] font-medium leading-[20px] hover:text-gray-900"
+              className="relative group text-gray-700 font-satoshi text-[17px] font-medium leading-[20px] hover:text-gray-900"
             >
               Services
+              <span className="absolute bg-[#E67474] -bottom-1 left-0 w-full h-0.5 bg-custom-purple transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
             </Link>
             <Link
               to="/contact-us/"

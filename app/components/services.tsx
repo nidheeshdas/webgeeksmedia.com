@@ -106,7 +106,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 rounded-[20px] border-r-[4px] border-b-[4px] border-[#D7C8FF] bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative lg:w-[285px] h-auto"
+              className={`p-6 rounded-[20px] border-r-[4px] border-b-[4px] border-[#D7C8FF] bg-white shadow-sm hover:shadow-md transition-all duration-300 ${service.status !== 'Upcoming' ? 'hover:-translate-y-1 hover:bg-[#e4dbff]':null} relative lg:w-[285px] h-auto`}
             >
               {/* Status Badge */}
               {service.status && (
