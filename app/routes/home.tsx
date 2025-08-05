@@ -118,7 +118,7 @@ export default function Home() {
         </div>
         <Link to="/audit-service/">
           <div className="p-[2px] rounded-[30px] bg-gradient-to-r from-[#E67474] to-[#AA3FFE] shadow-[0_4px_15px_rgba(0,0,0,0.15)]">
-            <button className="flex flex-row gap-[10px] text-[#333] text-center font-medium text-[16px] leading-[16px] cursor-pointer bg-white rounded-[28px] px-[21px] py-[17px] transition-colors hover:bg-gray-100">
+            <button className="flex flex-row gap-[10px] text-[#333] text-center font-medium text-[16px] leading-[16px] cursor-pointer bg-white rounded-[28px] px-[28px] py-[20px] transition-colors hover:bg-gray-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
