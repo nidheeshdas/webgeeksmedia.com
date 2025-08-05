@@ -9,7 +9,7 @@ DirectoryIndex index.html index.php
 # Header set Content-Security-Policy ...
 	Header set Referrer-Policy "same-origin"
 	Header set Content-Security-Policy "frame-ancestors 'self';"
-	Header always set Permissions-Policy "geolocation=(); midi=();notifications=();push=();sync-xhr=();accelerometer=(); gyroscope=(); magnetometer=(); payment=(); camera=(); microphone=();usb=(); xr=();speaker=(self);vibrate=();fullscreen=(self);"
+	Header always set Permissions-Policy "geolocation=(),  midi=(), notifications=(), push=(), sync-xhr=(), accelerometer=(),  gyroscope=(),  magnetometer=(),  payment=(),  camera=(),  microphone=(), usb=(),  xr=(), speaker=(self), vibrate=(), fullscreen=(self)"
 </IfModule>
 
 # BEGIN Security
