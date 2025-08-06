@@ -1,10 +1,10 @@
 # Global rules
 # -----------------
 User-agent: *
-# Prevent crawling CF challenge URLs
-Disallow: /cdn-cgi/bm/cv/
-Disallow: /cdn-cgi/challenge-platform/
-Disallow: /cdn-cgi/l/email-protection
+# Prevent crawling of Cloudflare resources and unnecessary assets
+Disallow: /cdn-cgi/
+Disallow: /assets/*.css$
+Disallow: /assets/*.js$
 
 # Ban bots that don't benefit us.
 # --------------------------------
